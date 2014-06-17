@@ -6,7 +6,7 @@ Euclid The Game
 Feel free to contribute to this project by fixing bugs/typos etc. or by creating new levels.
 To create new levels you will need to understand geogebra a little bit.
 
-If the source code of this project looks like I'm bit of a noob with html/javascript etc. Well then that is absolutely right ! That is why I've put this project on github, I'm not so good with html/javascript at all. If you want to make this project more awesome by cleaning up the html code, making some design, or whatever, feel free to do so !
+If the source code of this project looks like I'm bit of a noob with html/javascript etc. Well then that is absolutely right ! That is why I've put this project on github, I'm not so good with html/javascript at all. If you want to make this project more awesome by cleaning up the html code, making some cool css design, or whatever, feel free to do so !
 
 I have written a couple of function that make it easy to test if objects/lines/circles are drawn:
 
