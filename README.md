@@ -8,7 +8,7 @@ To create new levels you will need to understand geogebra a little bit.
 
 I have written a couple of function that make it easy to test if objects/lines/circles are drawn:
 
-```
+```javascript
 function ggbOnInit() {
   ggbApplet.debug("ggbOnInit");
   ggbApplet.registerAddListener("newObjectListener");
@@ -85,12 +85,8 @@ function newObjectListener(obj) {
   }
   }
   //here you can check all objects 
-  checkobject("target1","step1");
-  checkobject("target2","step1");
-checksegmentdirection("target3","step1");
-checksegmentdirection("target4","step1");
-    checkobject("target5","step1");
-  checkobject("target6","step1");
+
+
   //which step are neccesary to complete level
   if (ggbApplet.getVisible("step1") ) {
     ggbApplet.setVisible("complete", true);
