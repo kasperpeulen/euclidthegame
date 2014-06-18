@@ -30,7 +30,9 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-51953785-1', 'neocities.org');
+  ga('create', 'UA-51953785-1', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+ga('linker:autoLink', ['neocities.org', 'euclidthegame.org'] );
   ga('send', 'pageview');
 
 </script>
@@ -67,7 +69,7 @@ document.getElementById("level").style.visibility="hidden";
                                 tmpOnLoad();
                             applet.toggleAppletTypeControls("");
                     }
-                </script>
+                </script>© Kasper Peulen 2014
 <p>			This game is still in beta. If you find a bug or if you have other feedback, you can leave a message here:</p>	
 				 <div style="max-width:800px; font-size:5pt;"id="disqus_thread"></div>
     <script type="text/javascript">
