@@ -4,7 +4,6 @@ Euclid The Game
 © Kasper Peulen 2014
 
 Feel free to contribute to this project by fixing issues or by creating new levels.
-To create new levels you will need to understand geogebra a little bit. 
 
 I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
 http://math.stackexchange.com/questions/373672/about-euclids-elements-and-modern-video-games
