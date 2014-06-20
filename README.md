@@ -3,12 +3,19 @@ Euclid The Game
 
 © Kasper Peulen 2014
 
-Feel free to contribute to this project by fixing bugs/typos etc. or by creating new levels.
-To create new levels you will need to understand geogebra a little bit.
+Feel free to contribute to this project by fixing issues or by creating new levels.
+To create new levels you will need to understand geogebra a little bit. 
 
-If the source code of this project looks like I'm bit of a noob with html/javascript etc. Well then that is absolutely right ! That is why I've put this project on github, I'm not so good with html/javascript at all. If you want to make this project more awesome by cleaning up the html code, making some cool css design, or whatever, feel free to do so !
+I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
+http://math.stackexchange.com/questions/373672/about-euclids-elements-and-modern-video-games
 
-I have written a couple of function that make it easy to test if objects/lines/circles are drawn:
+I hoped that I could inspire game developers to make such a game. Well, I failed ! But I did inspire myself to learn a little bit about html/javascript and geogebra, and in this way, I was able to make this game.
+
+But I still have a lot to learn to make this game feel and look a little bit more professional. Any advice or any contribution would be absolutely appreciated to head this project in the right direction.
+
+At this moment, the website runs at neocities.org, I can't use server sides languages here, I can't even create directories. So it would probably a good first step, to move this project to some other server.
+
+If you have worked with geogebra, it may be not so hard to contribute to new levels. I've written a couple of function that make it easy to test if objects/lines/circles are drawn:
 
 ```javascript
 function ggbOnInit() {
