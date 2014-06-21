@@ -10,3 +10,11 @@ h1 {
 	margin: 0 0 0.4em 0;
 	line-height: 1em;
 }
+
+#level {
+	background-color: #FAA;
+	margin: 12pt;
+	padding: 10pt;
+	border-radius: 10pt;
+	display: inline-block;
+}
