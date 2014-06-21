@@ -1,8 +1,6 @@
 Euclid The Game
 ===============
 
-© Kasper Peulen 2014
-
 Feel free to contribute to this project by fixing issues or by creating new levels.
 
 I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
@@ -102,3 +100,10 @@ function newObjectListener(obj) {
   }
 }
 ```
+
+## License
+
+&copy; Kasper Peulen 2014
+
+This project is licensed under the MIT license. See the LICENSE file for
+details.
