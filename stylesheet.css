@@ -11,11 +11,3 @@ h1 {
 	line-height: 1em;
 }
 #disqus_thread{ display:none;}
-
-#level {
-	background-color: #e5eecc;
-	margin: 12pt;
-	padding: 10pt;
-	border-radius: 10pt;
-	display: inline-block;
-}
