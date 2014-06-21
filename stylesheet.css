@@ -19,3 +19,7 @@ h1 {
 	border-radius: 10pt;
 	display: inline-block;
 }
+
+.redoButton {
+    width: 30px !important;
+}
