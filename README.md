@@ -2,7 +2,8 @@ Euclid The Game
 ===============
 
 © Kasper Peulen 2014
-
+You can make a local copy of this game, but you are not allowed to publish it on your own public website.
+You can use the geogebra javascript template that I wrote, and make your own geogebra applets with it.
 Feel free to contribute to this project by fixing issues or by creating new levels.
 
 I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
