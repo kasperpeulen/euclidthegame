@@ -9,9 +9,12 @@ The project is stil in its initial stage. The idea is now, to make a MIT license
 
 This part of the framework is already created, but is not yet easy for other people to use this framework and provide new content.
 
-Another part of this framework may be a login system that saves the progress of the user. Or a (high)score systems. You could for example get points for doing the challange in very few steps. Or for doing the challange with only a limited set of tools.
+Ideas for new addition to this framework:
 
-I would also be cool to modify the geogebra software, so that it looks more like a game. 
+* a login system that saves the progress of the user. 
+* improving the design of the website
+* making the geogebra applet look more like a game
+* a (high)score systems. You could for example get points for doing the challange in very few steps. Or for doing the challange with only a limited set of tools.
 
 I think about putting a MIT license on this "framework". If you provide content, by for example, providing levels, or a new set of levels (which we could call a "campaign"), the author should decide which license/copyright he wants to put on it.
 
