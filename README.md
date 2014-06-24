@@ -18,7 +18,7 @@ Ideas for new addition to this framework:
 
 I think about putting a MIT license on this "framework". If you provide content, by for example, providing levels, or a new set of levels (which we could call a "campaign"), the author should decide which license/copyright he wants to put on it.
 
-At this moment, I've created 20 levels, and those levels are copyrighted. You can make a local copy of those levels, you can modify those levels locally or in your github fork, but you are not allowed to redistribute those levels.
+At this moment, I've created 20 levels, and those levels are copyrighted. You can make a local copy of those levels, you can modify those levels locally or in your github fork, but you are not allowed to redistribute those levels without asking me for permission.
 
 --------------------
 
