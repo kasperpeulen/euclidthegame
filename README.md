@@ -7,7 +7,7 @@ The goal of this project is to gamify geometric challanges. We use the [geogebra
 
 The project is stil in its initial stage. The idea is now, to make a MIT licensed "framework" on top of geogebra that gamifies the geogebra experience. For example, if you are heading in the right direction, you get rewarded by messages like "Smart!", or "Well done !" etc. If you complete the challange, you are rewarded by unlocking new challanges or new tools.
 
-This part of the framework is already created, but for other people it is not yet as easy as I would like to use this framework to create new content.
+This part of the framework is already created, but is not yet easy for other people to use this framework and provide new content.
 
 Another part of this framework may be a login system that saves the progress of the user. Or a (high)score systems. You could for example get points for doing the challange in very few steps. Or for doing the challange with only a limited set of tools.
 
