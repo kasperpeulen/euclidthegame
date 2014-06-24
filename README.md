@@ -1,10 +1,22 @@
 Euclid The Game
 ===============
 
-© Kasper Peulen 2014   
-You can make a local copy of this game, you can modify the code locally or in your github fork, but you are not allowed to publish it on your own public website. 
-Feel free to write a pull request and contribute to this project by fixing issues or by creating new levels. 
-You are allowed to use the geogebra template I wrote to make your own geogebra applets.
+(c) 2014 Kasper Peulen
+
+The goal of this project is to gamify geometric challanges.
+We use the [geogebra](www.geogebra.org) software for this. The project is stil in its initial stage. The idea is now, to make a MIT licensed "framework" on top of geogebra that gamifies the geogebra experience. For example, if you are heading in the right direction, you get rewarded by messages like "Smart!", or "Well done !" etc. If you complete the challange, you are rewarded by unlocking new challanges or new tools.
+
+This part of the framework is already created, but for other people it is not yet as easy as I would like to use this framework to create new content.
+
+Another part of this framework may be a login system that saves the progress of the user. Or a (high)score systems. You could for example get points for doing the challange in very few steps. Or for doing the challange with only a limited set of tools.
+
+I would also be cool to modify the geogebra software, so that it looks more like a game. 
+
+I think about putting a MIT license on this "framework". If you provide content, by for example, providing levels, or a new set of levels (which we could call a "campaign"), the author should decide which license/copyright he wants to put on it.
+
+At this moment, I've created 20 levels, and those levels are copyrighted. You can make a local copy of those levels, you can modify those levels locally or in your github fork, but you are not allowed to redistribute those levels.
+
+--------------------
 
 I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
 http://math.stackexchange.com/questions/373672/about-euclids-elements-and-modern-video-games
