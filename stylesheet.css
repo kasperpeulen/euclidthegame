@@ -23,3 +23,5 @@ h1 {
 .redoButton {
     width: 30px !important;
 }
+
+#level {visibility:hidden;}
