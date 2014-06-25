@@ -18,10 +18,9 @@ h1 {
 	padding: 10pt;
 	border-radius: 10pt;
 	display: inline-block;
+	visibility:hidden;
 }
 
 .redoButton {
     width: 30px !important;
 }
-
-#level {visibility:hidden;}
