@@ -3,7 +3,7 @@ Euclid The Game
 
 (c) 2014 Kasper Peulen
 
-The goal of this project is to gamify geometric challanges. We use the [geogebra](www.geogebra.org) software for this.
+The goal of this project is to gamify geometric challanges. We use the [geogebra](http://www.geogebra.org) software for this.
 
 The project is stil in its initial stage. The idea is now, to make a MIT licensed "framework" on top of geogebra that gamifies the geogebra experience. For example, if you are heading in the right direction, you get rewarded by messages like "Smart!", or "Well done !" etc. If you complete the challange, you are rewarded by unlocking new challanges or new tools.
 
