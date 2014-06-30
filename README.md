@@ -19,9 +19,9 @@ Ideas for new addition to this framework:
 License update (6/30/2014)
 ---------------------
 
-The license of this project lays a little bit complicated. At first, we have the geogebra license. The files in this project are build on top geogebra and so none of them will work wihtout geogebra.
+The license of this project is a little bit complicated. At first, we have the geogebra license. The files in this project are build on top geogebra and so none of them will work wihtout geogebra.
 
-Second, we have the framework where this website is build in. This framework I will put in a different repo, probably called something like "Geogebra Gamified". This repo will have a MIT license. All the contributions will also automatically have a MIT license. Part of this framework is for example the testobject.js file.
+Second, we have the framework where this website is build in. This framework I will put in a different repo, probably called something like "Geogebra Gamified". This repo will have a MIT license. All the contributions in this repo will also automatically have a MIT license. Part of this framework is for example the testobject.js file. (see the _include folder).
 
 Third, we have the sourcecode of the Euclid: The Game website. I don't want people to redistribute the website without asking me for permission. Therefore the only option is to put no license on the sourcecode of the website. You can read the source, you can learn from it, you can copy it locally, or in your github fork, but you are not allowed to redistribute those levels without asking me for permission.
 
