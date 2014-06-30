@@ -1,0 +1,35 @@
+---
+layout: default
+title: Level 16
+lang: en
+number: 16
+
+---
+<p id="goal"><b>Goal:</b>   Construct the incircle of a triangle. An incircle is a circle fully contained in a triangle that is tangent to all three sides.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+Go to <a href="/Level17/">Level 17</a>.
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level16.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+ checkobject("target1");
+
+LevelCompleted(drawn("target1"),4);
+}
+</script>

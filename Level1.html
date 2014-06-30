@@ -6,9 +6,19 @@ title: Level 1
 	<b>Goal:</b> Construct an equilateral triangle such that the segment AB is one of its sides.
 </p>
 
+<script>
+$(document).ready(function(){
+  $("#button").click(function(){
+    $("#hint").toggle();
+  });
+});
+</script>
+<p><span id="button"><b>Show hint &nbsp;</b></span> <span style="display:none" id="hint"> Don't randomnly create new (blue) points, but create 2 circles with radius AB.</span></p>
+
 <p id="winningimg">
-<img src="/img/Level1.png"/ >
+<img src="data:image/png;base64, {% base64 img/Level1.png %}">
 </p>
+
 <div id="hidden" style="display: none">
 <p id="level">
 You unlocked a new tool: Constructing equilateral triangles! Go to <a href="/Level2/">level 2</a> !
