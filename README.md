@@ -16,11 +16,16 @@ Ideas for new addition to this framework:
 * making the geogebra applet look more like a game
 * a (high)score systems. You could for example get points for doing the challange in very few steps. Or for doing the challange with only a limited set of tools.
 
-I think about putting a MIT license on this "framework". If you provide content, by for example, providing levels, or a new set of levels (which we could call a "campaign"), the author should decide which license/copyright he wants to put on it.
+License update (6/30/2014)
+---------------------
 
-At this moment, I've created 20 levels, and those levels are copyrighted. You can make a local copy of those levels, you can modify those levels locally or in your github fork, but you are not allowed to redistribute those levels without asking me for permission.
+The license of this project lays a little bit complicated. At first, we have the geogebra license. The files in this project are build on top geogebra and so none of them will work wihtout geogebra.
 
---------------------
+Second, we have the framework where this website is build in. This framework I will put in a different repo, probably called something like "Geogebra Gamified". This repo will have a MIT license. All the contributions will also automatically have a MIT license. Part of this framework is for example the testobject.js file.
+
+Third, we have the sourcecode of the Euclid: The Game website. I don't want people to redistribute the website without asking me for permission. Therefore the only option is to put no license on the sourcecode of the website. You can read the source, you can learn from it, you can copy it locally, or in your github fork, but you are not allowed to redistribute those levels without asking me for permission.
+
+----------------------
 
 I think I should admit that I'm not a professional game developer. A year ago I posted the idea for this game at stackexchange:
 http://math.stackexchange.com/questions/373672/about-euclids-elements-and-modern-video-games
