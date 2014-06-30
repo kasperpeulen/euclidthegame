@@ -13,13 +13,13 @@ number: 7
 </p>
 <div id="hidden" style="display: none">
 <p id="level">
-You have unlocked a new tool! Constructing parallel lines. Go to <a href="/Level7/">level 7</a> !
+You allmost unlocked a new tool, but first beat <a href="/Level8/">Level 8</a> to prove the other case.
 </p>
 </div>
 <script type="text/javascript">
 	{% include parameters480p.js %}
-    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 " //| 3 | 100003 | 53";
-	parameters.ggbBase64 = "{% base64 ggb/Level6.ggb %}" ;	
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 "//| 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level7.ggb %}" ;	
 </script>
 
 <div id="applet_container">
@@ -28,15 +28,14 @@ You have unlocked a new tool! Constructing parallel lines. Go to <a href="/Level
 <script type="text/javascript">
 {% include testobjects.js %}
 
-checkdirection("linePerp",0,0);
-checkdirection("linePar",0,0);
+checkobject("targetPoint",0.3,0.3);
+checkdirection("segmentAC",0,0);
+checksegment("segmentCD",0,0);
+checkdirection("segmentBD",0,0);
+checkobject("lineParAB",0.5,0);   
+checkdirection("targetsegment",0,0);
 
-if (drawn("segmentPerp")){
-	Command('progress = 50');
-   }	
-
-
-LevelCompleted(drawn("linePar"),2);
+LevelCompleted((drawn("targetPoint") && drawn("targetsegment") )|| drawn("segmentCD"),3);
 
 }
 </script>
