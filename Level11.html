@@ -13,7 +13,7 @@ number: 11
 </p>
 <div id="hidden" style="display: none">
 <p id="level">
-Go to <a href="/Level11/">Level 12</a>.
+Go to <a href="/Level12/">Level 12</a>.
 </p>
 </div>
 <script type="text/javascript">
@@ -28,14 +28,18 @@ Go to <a href="/Level11/">Level 12</a>.
 <script type="text/javascript">
 {% include testobjects.js %}
 
-checksegment("target1a",0,0);
-checksegment("target2a",0,0);
-checksegment("target3a",0,0);
-checksegment("target4a",0,0);
-checksegment("target1b",0,0);
-checksegment("target2b",0,0);
-checksegment("target3b",0,0);
-checksegment("target4b",0,0);
+checksegment("target1a",-0.5,0);
+checksegment("target2a",-0.5,0);
+checksegment("target3a",-0.5,0);
+checksegment("target4a",-0.5,0);
+checksegment("target1b",0.5,0);
+checksegment("target2b",0.5,0);
+checksegment("target3b",0.5,0);
+checksegment("target4b",0.5,0);
+
+if (drawn("target1a")||drawn("target1b")||drawn("target2a")||drawn("target2b")||drawn("target3a")||drawn("target3b")||drawn("target4a")||drawn("target4b")){
+	Command('progress = 50');
+   }	
    
 LevelCompleted(
 (drawn("target1a")&& drawn("target1b"))||
