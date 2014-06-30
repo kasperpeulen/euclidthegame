@@ -1,0 +1,41 @@
+---
+layout: default
+title: Level 9
+lang: en
+number: 9
+
+---
+<p id="goal"><b>Goal:</b>  Construct a circle with radius equal to line segment AB and center C.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+You unlocked a new tool: Compass ! Go to <a href="/Level10/">Level 10</a>.
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003"// | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level9.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("targetcircle");
+checksegment("targetsegment",0.3,-0.5);
+
+if (drawn("targetsegment")){
+	Command('progress = 50');
+   }	
+   
+LevelCompleted(drawn("targetcircle"),2);
+
+}
+</script>

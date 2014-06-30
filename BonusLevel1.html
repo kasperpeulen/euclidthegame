@@ -10,9 +10,9 @@ title: Bonus Level 1
 <img src="http://i.snag.gy/EBDZu.jpg"/ >
 </p>
 
-<div id="hiddiv" style="display: none">
+<div id="hidden" style="display: none">
     <p id="level">
-Go to bonus <a href="/Level2/">level 2</a> !
+Go to bonus <a href="/BonusLevel2/">level 2</a> !
         </p>
     </div>
 
@@ -61,16 +61,8 @@ if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmen
 if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentT") === 4){
 	Command('progress = 80');         	
 }
-console.log(countstr);
 
-if (drawn("segmentLT") && drawn("segmentRT") && drawn("segmentLB") && drawn("segmentRB") && drawn("segmentT")){
-	Command('progress = 100');
-   Command('Complete = Text["Level completed !", (1.52038, -1.36364)]');   
-   
-   var countint = Math.round(5832/(parseInt(count.substring(count.lastIndexOf("=")+2,count.lastIndexOf('"')))));
-   
-    Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
-     $( "#hiddiv" ).slideDown( 1000 );
-	}
+LevelCompleted(drawn("segmentLT") && drawn("segmentRT") && drawn("segmentLB") && drawn("segmentRB") && drawn("segmentT"),6);
+
 }
 </script>

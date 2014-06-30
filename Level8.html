@@ -1,0 +1,41 @@
+---
+layout: default
+title: Level 8
+lang: en
+number: 8
+
+---
+<p id="goal"><b>Goal:</b> Construct a line segment with the same length and same direction as line segment AB but with beginpoint C.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+You enhanced your tool: Translating lines ! Go to <a href="/Level9/">Level 9</a>.
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003"// | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level8.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("targetpoint",0.3,0.5);
+checksegment("targetsegment",0.3,0.5);
+
+if (drawn("targetpoint")){
+	Command('progress = 50');
+   }	
+   
+LevelCompleted(drawn("targetsegment"),2);
+
+}
+</script>
