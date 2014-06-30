@@ -1,0 +1,47 @@
+---
+layout: default
+title: Level 11
+lang: en
+number: 11
+
+---
+<p id="goal"><b>Goal:</b>  Construct a new point E on the line segment CD such that CE has the same length as AB.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+Go to <a href="/Level11/">Level 12</a>.
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level11.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checksegment("target1a",0,0);
+checksegment("target2a",0,0);
+checksegment("target3a",0,0);
+checksegment("target4a",0,0);
+checksegment("target1b",0,0);
+checksegment("target2b",0,0);
+checksegment("target3b",0,0);
+checksegment("target4b",0,0);
+   
+LevelCompleted(
+(drawn("target1a")&& drawn("target1b"))||
+(drawn("target2a")&& drawn("target2b"))||
+(drawn("target3a")&& drawn("target3b"))||
+(drawn("target4a")&& drawn("target4b"))
+,4);
+}
+</script>
