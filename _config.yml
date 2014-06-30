@@ -1,9 +1,0 @@
-name: "Euclid: The Game"
-description: "A game created with Geogebra"
-
-url: "http://localhost:4000"
-
-paginate: 10
-
-markdown: rdiscount
-permalink: pretty
