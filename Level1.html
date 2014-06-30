@@ -1,0 +1,52 @@
+---
+layout: default
+title: Level 1
+---
+<p id="goal">
+	<b>Goal:</b> Construct an equilateral triangle such that the segment AB is one of its sides.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level1.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+You unlocked a new tool: Constructing equilateral triangles! Go to <a href="/Level2/">level 2</a> !
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10"; //| 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level1.ggb %}" ;
+	parameters.language = "en"
+	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("pointtop",-0.4,0.3);
+checkobject("pointbottom",-0.4,-0.3);
+//checkobject("circleleft");
+//checkobject("circleright");
+checksegment("segmentLB",-1.1,0);
+checksegment("segmentRB",0,0);
+checksegment("segmentLT",-1.1,0);
+checksegment("segmentRT",0,0);
+	
+if (drawn("pointtop") || drawn("pointbottom")) {  
+	Command('progress = 33');
+	}
+
+if (drawn("segmentLT") || drawn("segmentLB") || drawn("segmentRB") ||  drawn("segmentRT")){
+	Command('progress = 66');
+   }
+
+LevelCompleted((drawn("segmentLT") && drawn("segmentRT")) || (drawn("segmentLB") && drawn("segmentRB")),4);
+
+
+}
+</script>

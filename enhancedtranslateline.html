@@ -1,0 +1,51 @@
+---
+layout: default
+title: Bonus level for leftysrevenge
+---
+<p id="goal">
+	<b>Goal:</b>  Repeat the segment AB at the point B.
+</p>
+<p id="level">
+	Very good.
+	<a href="https://github.com/kasperpeulen/euclidthegame/issues/169">Go back to github and tell me what you think !</a><br>
+</p>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/translate.ggb %}" ;
+	parameters.language = "en"
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("C");
+checkobject("B");
+if (drawn("B")) {  
+    Command('ehm = Text["Ehm... did you select the line ? And then point B?", (0.10972, -2.32915)]');
+}
+
+if (drawn("C")) {  
+	setVisible("Progress1", false);
+	setVisible("ehm", false);
+    Command('Progress2 = Text["Progress: 100%", (0.10972, -0.32915)]');
+   Command('Complete = Text["Level completed !", (1.52038, -1.36364)]');   
+   document.getElementById("level").style.display="inline-block";
+	}
+
+	
+if (drawn("segmentLT") || drawn("segmentLB") || drawn("segmentRB") ||  drawn("segmentRT")){
+   setVisible("Progress2", false);
+    Command('Progress3 = Text["Progress: 66%", (0.10972, -0.32915)]');
+   }
+
+if ((drawn("segmentLT") && drawn("segmentRT")) || (drawn("segmentLB") && drawn("segmentRB"))){
+   setVisible("Progress3", false);
+   Command('Progress4 = Text["Progress: 100%", (0.10972, -0.32915)]');
+
+	}
+}
+</script>

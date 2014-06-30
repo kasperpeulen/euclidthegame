@@ -1,0 +1,49 @@
+---
+layout: default
+title: Level 4
+lang: en
+number: 4
+
+---
+<p id="goal">
+	<b>Goal:</b> Construct a line (segment) that goes through point A and that is perpendicular to the given line segment.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level4.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+Well done ! Go to <a href="/Level5/">level 5</a> !
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 "//| 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level4.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkdirection("segmentPerp",-0.4,0.3);
+checkpointontarget("segmentPerp",-0.4,0.3);
+checkpointontarget("segmentA",-0.4,-0.3);
+//checkobject("circleleft");
+//checkobject("circleright");
+
+if (drawn("psegmentA")){
+	Command('progress = 10');
+   }	
+
+if (drawn("psegmentPerp")){
+	Command('progress = 50');
+   }	
+
+LevelCompleted(drawn("segmentPerp"),3);
+
+}
+</script>

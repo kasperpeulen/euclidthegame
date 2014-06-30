@@ -1,0 +1,72 @@
+---
+layout: default
+title: Bonus Level 2
+---
+<p id="goal">
+	<b>Goal:</b> Construct a regular pentagon inscribed in a circle
+</p>
+
+<p id="winningimg">
+<img src="http://i.snag.gy/c8598.jpg"/ >
+</p>
+<p id="level">
+Well done !
+</p>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/BonusLevel2.ggb %}" ;
+	parameters.language = "en"
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("pointL");
+checkobject("pointLB");
+checkobject("pointR");
+checkobject("pointRB");
+checkobject("pointT");
+checksegmentdirection("segmentB");
+checksegmentdirection("segmentLB");
+checksegmentdirection("segmentRB");
+checksegmentdirection("segmentRT");
+checksegmentdirection("segmentLT");
+
+
+if (drawn("segmentB") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentRT") + drawn("segmentLT") === 1){
+   setVisible("Progress1",false);   
+   Command('Progress3 = Text["Progress: 20%", '+abspos("0.011","-0.032915")+']');   
+}
+
+
+if (drawn("segmentB") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentRT") + drawn("segmentLT") === 2){
+   Command('Progress3 = Text["Progress: 40%", '+abspos("0.011","-0.032915")+']');   
+}
+
+
+if (drawn("segmentB") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentRT") + drawn("segmentLT") === 3){
+   Command('Progress3 = Text["Progress: 60%", '+abspos("0.011","-0.032915")+']');   
+}
+
+if (drawn("segmentB") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentRT") + drawn("segmentLT") === 4){
+   Command('Progress3 = Text["Progress: 80%", '+abspos("0.011","-0.032915")+']');   
+
+   }
+
+
+if (drawn("segmentB") && drawn("segmentLB") && drawn("segmentRB") && drawn("segmentRT") && drawn("segmentLT")){
+   Command('Progress3 = Text["Progress: 100%", '+abspos("0.011","-0.032915")+']');
+   Command('Complete = Text["Level completed !", (1.52038, -1.36364)]');   
+   
+   var countint = Math.round(1132/(parseInt(count.substring(count.lastIndexOf("=")+2,count.lastIndexOf('"')))));
+   
+    Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
+   document.getElementById("level").style.display="inline-block";
+	}
+
+}
+</script>

@@ -1,0 +1,48 @@
+---
+layout: default
+title: Level 5
+number: 5
+lang: en
+
+
+---
+<p id="goal">
+	<b>Goal:</b> Construct a line (segment) perpendicular to line segment AB going through point C.
+</p>
+
+<p id="winningimg">
+<img src="/img/Level{{page.number}}.png"/ >
+</p>
+<div id="hidden" style="display: none">
+<p id="level">
+You unlocked a new tool: Constructing perpendicular lines! Go to <a href="/Level6/">level 6</a> !
+</p>
+</div>
+<script type="text/javascript">
+	{% include parameters480p.js %}
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9"// | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "{% base64 ggb/Level5.ggb %}" ;	
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+{% include testobjects.js %}
+
+checkobject("pointRight",-0.4,0.3);
+checkobject("pointPerp",-0.4,0.3);
+checkdirection("segmentPerp",0,0);
+
+if (drawn("pointRight")){
+	Command('progress = 10');
+   }	
+
+if (drawn("pointPerp")){
+	Command('progress = 50');
+   }	
+
+LevelCompleted(drawn("segmentPerp"),2);
+
+}
+</script>

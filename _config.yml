@@ -1,0 +1,10 @@
+# Site settings
+title: "Euclid: The Game"
+email: "kasperpeulen@gmail.com"
+description: "This website tries to gamify The Elements a book written by Euclid."
+baseurl: ""
+url: "http://euclidthegame.org"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
