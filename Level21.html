@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Level 20
+title: Level 21
 lang: en
-number: 20
+number: 21
 
 ---
-<p id="goal"><b>Goal:</b> Construct two points, such that the segment is cut into three equal pieces.
+<p id="goal"><b>Goal:</b> Constructing two tangents to the given circle from the point A
 </p>
 
 <p id="winningimg">
@@ -13,13 +13,13 @@ number: 20
 </p>
 <div id="hidden" style="display: none">
 <p id="level">
-Go to <a href="/Level21.html">Level 21</a>.
+Go to <a href="/Level22.html">Level 22</a>.
 </p>
 </div>
 <script type="text/javascript">
 	{% include parameters480p.js %}
     parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
-	parameters.ggbBase64 = "{% base64 ggb/Level20.ggb %}" ;	
+	parameters.ggbBase64 = "{% base64 ggb/Level21.ggb %}" ;	
 </script>
 
 <div id="applet_container">
@@ -27,10 +27,11 @@ Go to <a href="/Level21.html">Level 21</a>.
 
 <script type="text/javascript">
 {% include testobjects.js %}
-checkobject("target1",-0.3,0.5);
-checkobject("target2",-0.3,0.5);
-
-LevelCompleted(drawn("target1")&& drawn("target2")),4);
+checkobject("pointT",-0.3,0.5);
+checkobject("pointB",-0.3,0.5);
+checkdirection("tangentB",0,0);
+checkdirection("tangentT",0,0);
+LevelCompleted(drawn("tangentT")&& drawn("tangentB"),5);
 
 }
 </script>

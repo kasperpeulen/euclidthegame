@@ -1,25 +1,28 @@
 ---
 layout: default
-title: Level 20
+title: Level 23
 lang: en
-number: 20
-
+number: 23
 ---
-<p id="goal"><b>Goal:</b> Construct two points, such that the segment is cut into three equal pieces.
+<p id="goal">
+	<b>Goal:</b> Construct a line (segment) tangent to both circles. Construct a outer tangent line.
 </p>
 
 <p id="winningimg">
 <img src="/img/Level{{page.number}}.png"/ >
 </p>
+
 <div id="hidden" style="display: none">
-<p id="level">
-Go to <a href="/Level21.html">Level 21</a>.
-</p>
-</div>
+    <p id="level">
+Go to <a href="/Level24/">level 24</a> !
+        </p>
+    </div>
+
 <script type="text/javascript">
 	{% include parameters480p.js %}
     parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
-	parameters.ggbBase64 = "{% base64 ggb/Level20.ggb %}" ;	
+	parameters.ggbBase64 = "{% base64 ggb/Level23.ggb %}" ;
+	parameters.language = "en"
 </script>
 
 <div id="applet_container">
@@ -27,10 +30,12 @@ Go to <a href="/Level21.html">Level 21</a>.
 
 <script type="text/javascript">
 {% include testobjects.js %}
-checkobject("target1",-0.3,0.5);
-checkobject("target2",-0.3,0.5);
 
-LevelCompleted(drawn("target1")&& drawn("target2")),4);
+
+checkdirection("target3",0,0);
+checkdirection("target4",0,0);
+
+LevelCompleted(drawn("target3") || drawn("target4"),6);
 
 }
 </script>
