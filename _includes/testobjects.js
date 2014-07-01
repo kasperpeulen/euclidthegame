@@ -51,6 +51,27 @@ if (cmdString.substring(0,3) == "Ray" || (cmdString.substring(0,2) == "Eq" && gg
 	Command('countnumber = countnumber + 1');
 }
 
+if (cmdString.substring(0,13) == "AngleBisector"){
+
+var obj1 = cmdString.substring(14,15);
+var obj2 = cmdString.substring(17,18);
+var obj3 = cmdString.substring(20,21);
+var a = ggbApplet.getXcoord(obj1);
+var b = ggbApplet.getYcoord(obj1);
+var m = ggbApplet.getXcoord(obj2);
+var n = ggbApplet.getYcoord(obj2);
+var x = ggbApplet.getXcoord(obj3);
+var y = ggbApplet.getYcoord(obj3);
+
+function round(value) {
+    return(Math.round(value * 100000) / 100000);
+}
+if ( round((n-b)*(x-m)) === round((y-n)*(m-a))){
+Command('Delete['+obj+']');
+Command('Text["You can\'t use the bisecting tool if the angle is 180 degrees !",'+abspos("0.02","-0.632915")+']');
+}
+}
+
 function getCoord(obj){ 
 	if (ggbApplet.getObjectType(obj) === "point") {
 	var x = ggbApplet.getXcoord(obj);
