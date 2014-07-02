@@ -166,13 +166,16 @@ function LevelCompleted(condition,mincount){
 	var enddate = new Date();
 	var endtime = enddate.getTime();
 	var time = (endtime - ggbApplet.getValue('begintime'))/1000;
+	if (time >100) {time =100;}
  	Command('progress = 100');
 	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
     var countint = Math.round(mincount*1000/(ggbApplet.getValue("countnumber"))- time);
     Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
+	if (countint > 900){}{ Command('score2 = Text["Perfect ! You have done this challange in a minimum amount of moves !", '+abspos("0.35","-0.602915")+']');     }
    //document.getElementById("level").style.display="inline-block";	
 	  $( "#hidden" ).slideDown(1000);	
    $( "#hiddencomments" ).toggle();	
+      $( "#hiddenscore" ).toggle();	
 
 	}
 }   

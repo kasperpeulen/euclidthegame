@@ -1,4 +1,6 @@
 © 2014 Kasper Peulen. Created with <a href="http://www.geogebra.org/">GeoGebra</a>.
+
+
 <p>This game is in active development, you can report bugs at <a href="https://github.com/kasperpeulen/euclidthegame">github</a>. <br>
 </p>
 {% if page.number > 5 %}
@@ -12,7 +14,13 @@ If you like this game and want to support me with improving this game, you can m
 <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
 </form>
 {% endif %}
-<p>Comments will be visible once you have completed the level. </p>
+
+<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+<a href="javascript:toggleDiv('hiddencomments');">Click</a> to show comments. Be aware, they may contain spoilers. <br>
 <div id="hiddencomments" style="display: none">
 				 <div style="max-width:800px; font-size:5pt;"id="disqus_thread"></div></div>
     <script type="text/javascript">
