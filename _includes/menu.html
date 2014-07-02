@@ -7,11 +7,15 @@
             <ul>
             {% assign sorted_pages = page_cat["items"] | sort:"number" %}
             {% for p in sorted_pages %}
-                {% unless p.number > page.number %}
                 <li>
+                {% if p.number < page.number %}
                     <a href="{{ p.url }}">{{p.title}}</a>
+                {% elsif p.number == page.number %}
+                    <a href="{{ p.url  }}" class="current">{{p.title}} </a>
+                {% else %}
+                    {{p.title}}
+                {% endif %}
                 </li>
-                {% endunless %}
             {% endfor %}
         </ul>
         </li>
