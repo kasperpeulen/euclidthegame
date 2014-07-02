@@ -1,0 +1,29 @@
+#Menu
+{
+    float:left;
+    width:200px;
+}
+#page
+{
+	width: 800px;
+    overflow:hidden;
+}
+a {
+    color:#145d8a;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #145d8a;
+}
+a:hover,
+a:focus,
+a:active {
+    color: rgb(255,204,102);
+	font-weight: bold;
+}
+a:focus,
+a:active {
+    color: rgb(255,204,102);
+	font-weight: bold;
+	}
