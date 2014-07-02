@@ -1,0 +1,18 @@
+<ul>
+    {% assign allPages = site.pages | group_by:"cat" %}
+        {% for page_cat in allPages %}
+        {% unless page_cat["name"] == 'notSorted' %}
+        <li>
+            <h1>{{page_cat["name"]}} </h1>
+            <ul>
+            {% assign sorted_pages = page_cat["items"] | sort:"number" %}
+            {% for p in sorted_pages %}
+                <li>
+                    <a href="{{ p.url }}">{{p.title}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        </li>
+        {% endunless %}
+        {% endfor %}
+</ul>

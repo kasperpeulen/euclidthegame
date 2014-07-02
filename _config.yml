@@ -5,6 +5,15 @@ description: "This website tries to gamify The Elements a book written by Euclid
 baseurl: ""
 url: "http://euclidthegame.org"
 
+# Defaults
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            cat: notSorted
+
+
 # Build settings
 markdown: kramdown
 permalink: pretty
