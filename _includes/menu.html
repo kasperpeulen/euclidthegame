@@ -1,16 +1,18 @@
 <ul>
-    {% assign allPages = site.pages | group_by:"cat" %}
-        {% for page_cat in allPages %}
-        {% unless page_cat["name"] == 'notSorted' %}
+    {% assign open=true  %} 
+    {% for cat in site.site_order %}
+        {% assign page_cat= site.pages | where:"cat",cat  %} 
+        {% if page_cat %}
         <li>
-            <h1>{{page_cat["name"]}} </h1>
+            <h1>{{ cat  }} </h1>
             <ul>
-            {% assign sorted_pages = page_cat["items"] | sort:"number" %}
+            {% assign sorted_pages = page_cat | sort:"number" %}
             {% for p in sorted_pages %}
                 <li>
-                {% if p.number < page.number %}
-                    <a href="{{ p.url }}">{{p.title}}</a>
-                {% elsif p.number == page.number %}
+                {% if p.url == page.url %}
+                    <a href="{{ p.url }}" class="current">{{p.title}}</a>
+                    {% assign open=false %}
+                {% elsif open %}
                     <a href="{{ p.url  }}" class="current">{{p.title}} </a>
                 {% else %}
                     {{p.title}}
@@ -19,6 +21,6 @@
             {% endfor %}
         </ul>
         </li>
-        {% endunless %}
-        {% endfor %}
+        {% endif %}
+    {% endfor %}
 </ul>

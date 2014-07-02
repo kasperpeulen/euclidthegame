@@ -5,6 +5,10 @@ description: "This website tries to gamify The Elements a book written by Euclid
 baseurl: ""
 url: "http://euclidthegame.org"
 
+site_order:
+    - Tutorial
+    - level
+
 # Defaults
 defaults:
     -
