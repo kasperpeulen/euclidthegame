@@ -1,0 +1,11 @@
+#Menu
+{
+    float:left;
+    width:200px;
+}
+#page
+{
+    float:left;
+    width:800px;
+    overflow:hidden;
+}
