@@ -52,8 +52,8 @@ if (cmdString.substring(0,3) == "Ray" || (cmdString.substring(0,2) == "Eq" && gg
 }
 
 if (cmdString.substring(0,13) == "AngleBisector"){
-
 var obj1 = cmdString.substring(14,15);
+if (ggbApplet.getObjectType(obj1) === "point"){
 var obj2 = cmdString.substring(17,18);
 var obj3 = cmdString.substring(20,21);
 var a = ggbApplet.getXcoord(obj1);
@@ -71,7 +71,7 @@ Command('Delete['+obj+']');
 Command('Text["You can\'t use the bisecting tool if the angle is 180 degrees !",'+abspos("0.02","-0.632915")+']');
 }
 }
-
+}
 function getCoord(obj){ 
 	if (ggbApplet.getObjectType(obj) === "point" ) {
 	var x = ggbApplet.getXcoord(obj);
@@ -131,7 +131,6 @@ function getCoord(obj){
       
 	  Command("finished = (("+obj+"(1)=="+target+"(1))&&("+obj+"(-1)=="+target+"(-1)))");
       finished = ggbApplet.getValueString("finished");
-	  console.log(ggbApplet.getValueString("finished"));
       if (finished.indexOf("true") > -1) {
 	  Command('f_'+target+'= Text["", (0,0)]');
 	  	  if (typeof x !== 'undefined'){
@@ -172,6 +171,8 @@ function LevelCompleted(condition,mincount){
     var countint = Math.round(mincount*1000/(ggbApplet.getValue("countnumber"))- time);
     Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
    //document.getElementById("level").style.display="inline-block";	
-     $( "#hidden" ).slideDown( 1000 );	
+	  $( "#hidden" ).slideDown(1000);	
+   $( "#hiddencomments" ).toggle();	
+
 	}
 }   
