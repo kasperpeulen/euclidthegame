@@ -1,23 +1,17 @@
-<!-- 
-<ul>
+
+
     {% assign allPages = site.pages | group_by:"cat" %}
         {% for page_cat in allPages %}
         {% unless page_cat["name"] == 'notSorted' %}
-        <li>
-            <h1>{{page_cat["name"]}} </h1>
             <ul>
             {% assign sorted_pages = page_cat["items"] | sort:"number" %}
             {% for p in sorted_pages %}
-                {% unless p.number > page.number %}
-                <li>
-                    <a href="{{ p.url }}">{{p.title}}</a>
-                </li>
-                {% endunless %}
+					<script> 
+					console.log(localStorage.Level{{p.number}});
+					if (localStorage.Level{{p.number}} > 0){ 
+					document.write("<li><a href=\"{{ p.url }}\">{{p.title}}</a> ("+localStorage.Level{{p.number}}+")</li>");}
+					</script>
             {% endfor %}
         </ul>
-        </li>
         {% endunless %}
         {% endfor %}
-</ul>
-
--->

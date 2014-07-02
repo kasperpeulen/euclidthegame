@@ -170,12 +170,20 @@ function LevelCompleted(condition,mincount){
  	Command('progress = 100');
 	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
     var countint = Math.round(mincount*1000/(ggbApplet.getValue("countnumber"))- time);
+	if (countint < 100){countint = 100;}
     Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
 	if (countint > 900){}{ Command('score2 = Text["Perfect ! You have done this challange in a minimum amount of moves !", '+abspos("0.35","-0.602915")+']');     }
    //document.getElementById("level").style.display="inline-block";	
 	  $( "#hidden" ).slideDown(1000);	
    $( "#hiddencomments" ).toggle();	
-      $( "#hiddenscore" ).toggle();	
+// Store
+localStorage.Level{{page.number}} = countint;
+console.log(localStorage.Level{{page.number}});
+// Retrieve
+   
 
 	}
 }   
+
+
+
