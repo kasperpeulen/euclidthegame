@@ -1,6 +1,21 @@
-© 2014 Kasper Peulen. Created with <a href="http://www.geogebra.org/">GeoGebra</a>.
-				<p>This is the development website of euclidthegame.org. Feedback about the new features is greatly appreciated. Do you have ideas for other new features? Please let me know in the comments.
 
+
+© 2014 Kasper Peulen. Created with <a href="http://www.geogebra.org/">GeoGebra</a>.
+				<p>Note that you are playing the old version of this level. Click <a id="new">here</a> to go to the new version of this level.</p>
+<script>
+var url = document.URL
+var newurl1 = url.lastIndexOf("/");
+var newurl2 = url.lastIndexOf(".");
+var element = document.getElementById("new"); 
+
+element.setAttribute("href", url.substring(newurl1,newurl2)); 
+</script>				
+<script type="text/javascript">
+function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+</script>
+<a href="javascript:toggleDiv('disqus_thread');">Click</a> to show comments. Be aware, they may contain spoilers. <br>
 				 <div style="max-width:800px; font-size:5pt;"id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

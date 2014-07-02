@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Euclid: The Game - Level 22</title>
+    <meta name="description" content="This website tries to gamify The Elements a book written by Euclid.">
+    <link rel="canonical" href="http://euclidthegame.org/Level22/">
+
+    <!-- Custom CSS -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascript/deployggb.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+</head>
+
+  <div id="Menu">
+    <!--<ul>
+    
+        
+        
+        
+        
+        <li>
+            <h1>level </h1>
+            <ul>
+            
+            
+                
+                <li>
+                    <a href="/Level1/">Level 1</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level2/">Level 2</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level3/">Level 3</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level4/">Level 4</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level5/">Level 5</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level6/">Level 6</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level7/">Level 7</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level8/">Level 8</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level9/">Level 9</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level10/">Level 10</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level11/">Level 11</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level12/">Level 12</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level13/">Level 13</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level14/">Level 14</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level15/">Level 15</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level16/">Level 16</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level17/">Level 17</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level18/">Level 18</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level19/">Level 19</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level20/">Level 20</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level21/">Level 21</a>
+                </li>
+                
+            
+                
+                <li>
+                    <a href="/Level22/">Level 22</a>
+                </li>
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+        </li>
+        
+        
+</ul>
+-->
+  </div>
+  <div id="page">
+      
+
+        <body>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51953785-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+        <h1>Euclid: The Game - Level 22</h1>
+
+          <p id="goal">
+	<b>Goal:</b> Construct a regular hexagon given one side AB.
+</p>
+
+<p id="winningimg">
+<img src="http://i.snag.gy/EBDZu.jpg"/ >
+</p>
+
+<div id="hidden" style="display: none">
+    <p id="level">
+Go to <a href="/Level23/">level 23</a> !
+        </p>
+    </div>
+
+<script type="text/javascript">
+	    var parameters = {"id":"ggbApplet","width":640,"height":480,"showToolBar":true,"showMenuBar":false,"showAlgebraInput":false,"showResetIcon":true,"enableLabelDrags":false,"enableShiftDragZoom":true,"enableRightClick":true, "showToolBarHelp":false,"errorDialogsActive":true,"useBrowserForJS":true, "language":"en","isPreloader":false,"screenshotGenerator":false,"preventFocus":false};
+    /** is3D=is 3D applet using 3D view, AV=Algebra View, SV=Spreadsheet View, CV=CAS View, EV2=Graphics View 2, CP=Construction Protocol, PC=Probability Calculator, DA=Data Analysis, FI=Function Inspector, PV=Python, macro=Macro View */
+    var views = {"is3D":false,"AV":false,"SV":false,"CV":false,"EV2":false,"CP":false,"PC":false,"DA":false,"FI":false,"PV":false,"macro":true};
+	var applet = new GGBApplet('5.0', parameters, views);
+    applet.setPreviewImage('', '/img/GeoGebra_loading.png');
+    window.onload = function() {
+        applet.inject('applet_container', 'html5');
+    }
+	parameters.language = "en"
+    parameters.customToolBar = "501 | 5 | 15 | 18 | 10 | 100001 | 100002 | 9 | 4 | 3 | 100003 | 53";
+	parameters.ggbBase64 = "UEsDBBQACAgIAMRs4UQAAAAAAAAAAAAAAAAWAAAAZ2VvZ2VicmFfdGh1bWJuYWlsLnBuZ+sM8HPn5ZLiYmBg4PX0cAkC0ieAuJWDDUjKzduuw8DAeNrTxTGk4tbbKxu9DgeINDzc4xqv/P7KUfYCISGj1Il6J9O8NHeI/mKJ5IrcLW4e7tgi1WJ14mJJ0JGTQlE/7Hak7I55t7N+EsO/KTuYBDg4WFiYmBgbGxwcFBQEBDhAmJAQRBi/EEwzPiGGRkJCD3fve698/nO3RXbs9Y1x65O335ac43DMcP75xRpdN95/T6+/djNHrPuo0rbbaw9ypsicfvpJ4viHvS0OYatDt+RmFzAlbriZk2Q11y1ymp6zwuMTm3TUJnuGhJbO4r0fv+/a5/Nfv0l8/PXhfWl9ubTnJJdZy9jUJxTy1D95ePFuTPzcJ4LHH74sV5Bvnzxn6+tdyRd8L0vMQXUuA1Ig4RRCCUo0oYJpdozsLc8eHVrYpACMXQZPVz+XdU4JTQBQSwcI/g/33U4BAAAEAgAAUEsDBBQACAgIAMRs4UQAAAAAAAAAAAAAAAAvAAAAZjhmMTY4ZTEwZGQzNGE3NzNiMGQ2MmUyNmZjNDI2N2JcZXF0cmlhbmdsZS5naWYtkl9oF1QUx79rC2u2vTTL5oOzTNM7wzhhgSWmv1ErGXPu+lQhezj9kXKIkVHCTRFKRAihcSLcRmV1Ex04EO0hWX9EOCVJt5aFSMSe+qtIDxLf7sID9x4uB+455/P9vtnf92hba2crgLbexxoDNXfNnpua6914f99XQDP6Nwz24HoIoIABDhABCIKgCIbgCEQEoiAqoiE6IpGAJEiKZEiORGQgC7IiG7IjEwUogqIohuIorH+DAipooIP1UXuLQAUm8FqTAAkiQSWYBJdAiZAoElWiSXSJlARJIkklmSSXRMmQLJJVskl2yZQCKSJFpZgUl0IhhCJUoQldWOeoa4tCFabwOpYGaBANqsE0uAZqhEbRqBpNo2ukJmgSTarJNLkmaoZm0ayaTbNrphZoES2qxbS4FiqhFKUqTenKiqASF4MazOCViAVYEAtqwSy4BVqERbGoFs2iW6QlWBJLasksuSVahmWxrJbNslumFVgRK2rFrLgVGmEUoxrN6MZKv4otDnWYw6sYHuBBPKgH8+Ae6BEexaN6NI/ukZ7gSTypJ/PknugZnsWzejbP7ple4EW8qBfz4l7ohFOc6jSnOzlrhKpGRVLnqsVqhQAGYVAGY3AGMoJRGJXRGJ2RTGASJmUyJmciM5iFWZmN2ZnJAhZhURZjcZbZZtVoVe2KvO79f/PrcWz/D2/X1LRjoG8T1s5MV0NgprfxyODOC18efLh9auUte0c3Pren5cyW8YNLjzZvOvdFy8vjc4f+Gpx/qaP7/jtWvvHZqg/aFjw48Mvi0UMrzoyvmLrt9T3/nL92Z1qIt06Emam57ff4U/u7O9YNzbm56cnh4/eumejruX188Uvrn1/f+njXsw8MrzqxbNnqprtPfd24cOO7vuu+D9tPHzh04ORk88jI6PTmsSM/P/3jDR8t+fPzxtVbJw4f3vrbnLGxzv5Pvn/vu10bNl+86/dnPt1xdtveNRNXfupafXnRlYVPfDP899a154e6553e/fGCsc5LOx/6dfnZ11pHXl20veOPb+dP/stz+9554eJkyK/0tEwfe/HqLIbenr7G0XVbdv8HUEsHCNotjegoAwAAOAQAAFBLAwQUAAgICADEbOFEAAAAAAAAAAAAAAAALQAAADgwNmQzYjgwNjQ4NTliOGY5MjlkZTkyZTZlM2E5OTljXG1pZHBvaW50LnBuZwGdAWL+iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABZElEQVR42u2WvUrDYBSGcwuBLsmQH5JaUBoIMTYaIp1zB96CU3EpXoCbOLl6AS7uSoeMLqIYEIpoRAR1sIM/iEp9zUlQXAoWk5MlgZPwTec5Oee87ydEUYQqQ6BXVU8NUAPUAKUBJEkCXdchCAIajQbiOOYFsG0bkiRB0zTIsgxFUXgBqHJK/h10ZgXoLraxutJBqzWDMAzhui4TwPgduNxBctBDd3kpq9zzvGwmygd4GwFnG8D5NvDxxLwFzxfA6Tpwswd8jpnX8OEQOO7lXy4dcBwn66+pyWnlfeDlileIKLnv+/l6Ue9ZlfD1FvNzcpa82TSZpfhxCJysAXf7Uw1bMQD3gzz56IjZjKjS69182NLfX7obkmoFQZCrWGcBySBNPNz817BNBWBZFlRVhWEY2OqH8GyzkH7/GeC3k1nt2YlOVhqAKIo/Xk6+TmbCCkBnusVQ5dSOSU5W3wlrgEIBqowv7JgB46L1nQ0AAAAASUVORK5CYIJQSwcIFcqE1KIBAACdAQAAUEsDBBQACAgIAMRs4UQAAAAAAAAAAAAAAAA1AAAAMmQ2ZGJmY2ZhMzQ5ZTBkMzdlNmJlMTI4ODIxMDIzN2VcdHJhbnNsYXRpbmcgbGluZS5wbmcB2QEm/olQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAaBJREFUeNrtlktLAlEUxydbuZog7Ru4EAv8AIJ9GovWLiWhTbUqCpMWQRBFG4NCRFrZIohACCoiq4WpjTX5SnyO+u8MziZqxkUnhZgL967Oued3nvcKiUQCo9yCeoxqmQB/BqAoCvx+P+x2OyKRyPABQqEteDweOBwOCIIwfIDdnTDGyPCkzTZkgF4XkKLA6yFWl5fg9c4iHo9/E2tIQLPADdAuA6kNMn42ULT2TAAyJ0DhErhfJ4iKoZhEwei2uVPwtA1kj42Do3G1ipSlHhdANQXcrVA8MwNF0wfcRZg7oVv3qOFruiKqt+Vb7kHUKgEPm4B8rt8IWoi7Lar2PCeAalQ1rvaPwSomgXqeexQ/hoHMEbml6Io03zTPm18r/XcA5et+oTVyAy+TTvth53uMsuRxep966MO4HqNMr2EsFoMoTsDtnsF7cg0oXegqqiHu1LWXr8oEIIoiXK5pTNlELMzPGSrWKSOlK+b/gNPphNVqhcUyjsVg8GfDL+RxQ2u3DjOALMvw+XwIBAK6CpWb/oAxv2QmgAlgAvw/gFHuT7xMS2N+K4uFAAAAAElFTkSuQmCCUEsHCICSCXbeAQAA2QEAAFBLAwQUAAgICADEbOFEAAAAAAAAAAAAAAAAEgAAAGdlb2dlYnJhX21hY3JvLnhtbO1aW3ObOBR+3v4KhucG6y7Ridtx3OxsZ9rtQ/qwM9t9kEE4bDG4QJo4v36PECS+5FLHTkO7ITMGJCGk853bd8jhm4tZ5n0zZZUW+dDHAfI9k0dFnObToX9WJwfKf/P6xeHUFFMzKbWXFOVM10OfBcy/fg7uAhrah72LKn2VF3/qmanmOjIn0amZ6fdFpOtm5Gldz18NBufn50E3Z1CU08F0WgcXVex7sJ68GvrtxSuYbuWhc9oMJwjhwV8f3rvpD9K8qnUeGd+Dtc50VBZeNIvtIob+8dezNNO1KXVWl6nOpxkMq4si2+j2Vvv/MNl86J+YzES1V58X3rxI87ryvTQq8t/TDB5OVIKFMhjFMWVaSjpBsSCGiCRiRMjJZ/O1mzOYponvVafF+bv8E8x+pMuhX5dn8LKomC/Gem4FVLVt3Tbe5fOz2tNo6I98T+Ohf+QPur6PZ3XXOXadGk5k6E+aMbDICuaK7LRendZ2vdB/Vp8Wpb2KYdNwhpGww5nJYY+LObQ0u/S9TE9MZl/7+sVvh3bZXjH5FyTRLbrtb24Gdgx0j4usKD2YnRLfm7rTxJ10Nj/VQx+BjjSjM70wpfdNwxRXLTDhhyI2K606T2eN6nhVbQAODDKcGxM3V27BcDGH6RqNTXRWteuJiqKMK+/CaqcUXBDue4uhf0ACFoL6SEkoUqFCoMeXTvObx5rtn6SX7TLocmu9yJZXdzhoJXePDI9+ARnyQDEqWxGCsfOwuduD5KJiNtN57OWNOY7TMspMI7D0Rt0HIV3rfeQma6fYgAFMII2uxBzdA8PSvpdxIJw3QBCrKYAERjtAkaW5ccKoT9PoS24qsHjSoYDcxR9pHBvrjd0zJp2a/Bustygr8K+oddML5N7vXXYtFyCjg6ZpgdumS7wEEChBmV54o278qBs1AqdBWEAkVhIsAyHBCIVm2r5hxBrQOysacRi+YUVurV9zt73K/g590LMoTdLoAaAfOdBHG6DH24AeP4N+B+hMBRwxzBENkYN2BfIro7eIXxn9DkC/yyHQVrCrNawjh3Xs4hfegHx8N+Sr7nb8IHcrVAO4PU3c6aFwXztNEYQETIqj9qDi5hCEH8OTnpipbb/ZlY43RKzvFnHVztYJUffArq4FDRIVgnHKCQ8xyFlyeXyAXbQiAbZuCy2DcGkDGpWUhlhwEmLC8MNNFYSY2ch5pdw2j3MLXZLCF2Pmn+Dhj/mnUueVzaPdmE4dt0VyfFtQnGyH5KRXSOJACUmFJFIAkjhUbcoBtiEVJnwNRQA5EJhQqUQoKAZjEr0CcrCchdv7JnPfJCkf0rh1YtfMZLVthY2Y3HVVXlIWM097drvBMjNRSMR0Ar9M8XCikpCEsQmJEYbqMAyjz7N29mCeTx+Nlxw/M5FVP4UDplqv1GrwM/G4W2Qo4Gy/EnsmHL3IPWkgZMjD62OdcThbsannQYP9M8H4+UDGgVRI3gHygbPvvaD8P2MXIDom0cpBG0/JAoyAqWEKiS9jXDyG2/w+WZMNWb/dRtZv+y9rBOknUGclgClzziiVP5rKbQYpsx0BMD3wYMvxHrXh3s532RaeJOlVWr8FP3u7AU+yHTxJr+ChAQuVZATIFlEhttnhoosYVu3B4TAUAj2TiKuQ9JlW3+bCjAMu2QDueBvfddwf30UDSrC0BT6GGQ+RwwwLm4ARgElipTB3NSgZICGZQBhz0BzE5E5u7Hvpb4Od/QqnraYsk+Crnpbk3kCGbfNLUCyTuy90KzyYxCKeJFGiKQsNiqk0YmJAdRUBg4C7z3X7AtA0x6J35MN6qcC2wYfjJZ/wpLQYNWqGGi1D+yN4KHgIxQMmoChVnEOiSCVFLUUGvcUcNBARHEJwlXsKrfsnzL0SJg8YX/7jjynLndKUn7ri3KUpQHAk+EobEwVS9ktKW122yqwEo8pWLTHuV1ly/wSnVzbwYx3Kd5Qa2lywNZC/Ry+9o3+epLa0J5j6W3AgKAAeJhUTlAgcwtV6weEm5bDlh03l2KEU8d6mKjfqgN7A/Z7vNS7r2e1jzZ5gfxL3tw5AOptnaZTWO9UnJr9YfWI96rOnjvq3st97iqvrUb8P5dV71Z6F7Ca1R6pXQf9WMjbo/hPz9X9QSwcIwToMATcGAAAPKgAAUEsDBBQACAgIAMRs4UQAAAAAAAAAAAAAAAAWAAAAZ2VvZ2VicmFfamF2YXNjcmlwdC5qc0srzUsuyczPU0hPT/LP88zLLNHQVKiu5QIAUEsHCEXM3l0aAAAAGAAAAFBLAwQUAAgICADEbOFEAAAAAAAAAAAAAAAADAAAAGdlb2dlYnJhLnhtbO1aW2/buBJ+7v4KQs+JQlIUL4XTRVJgcQpkL0hyDhb7Jku0rY0s+Uhy4hT98TskJVm+JnaSdgu0akKJ95n5vpmhlMHPi2mG7nVZpUV+7hEfe0jncZGk+fjcm9ejU+n9/OGnwVgXYz0sIzQqymlUn3vMZ95yHDz5gTKD0+Tc01ryYcj5KU0ifcpGPDxVgiSnio9IojQmVAYeQosqfZ8Xv0VTXc2iWN/EEz2Nroo4qu2ck7qevT87e3h48NvV/aIcn43HQ39RJR6CnefVudfcvIfpVgY9BLY7xZic/fnrlZv+NM2rOspj7SEj1Tz98NO7wUOaJ8UDekiTenLucS48NNHpeAJihgoezkynGcg603Gd3usKhvYercz1dObZblFu2t+5O5R14ngoSe/TRJfnHvYFV4SEjFEqpOQ49FBRpjqvm76kWfOsnW1wn+oHN625sysybPZ2n1bpMNPn3ijKKpAqzUclaBQ2VM7hsaofMz2MyvZ5uR9yAhd0SD9rMxeYzqkBWpjkJ4EITgTGJ7BFt5n+yh6qiyKz02IUKvTlC6KYYnRiCuIKCgXnrgm7Ohy4grqCuSJ0fZgbzlxX5vow14cFewRtnvdK2soZrMgJ4pkfbsQ0DWtiyp6YxMjwBRGzeVsEyGyb2O2bgjWP3D0KWxDsCtI0SvPLqosfIlBT0Zco6CwXsudLRHqrOi09X4vdipwdoEO6e8UnAdouCGDqLcgDfBLI8ISGO2R8oWrbVUnYExPWsv/tz8aSAX0RPI9YkbOXMP+IBQVe4XxLeFeSptynhlfb1OCs9YWDZkOompi+DbxqPYWgQAwBDftCQ9vQktcy1f6SlpaOqYaVzY1ob0h7Y8gOfEXAbhSYKYK2JXAF2GFWVGknw0Rns054u900n83rlS3G06S9rYu13kkR312uiaSjqm7voRNEhWXscVFiJTS9G2TRUGcQwG+MthG6jzKwmWfnHxV5jVpNU1c3LqPZJI2rG13XMKpCf0f30VVU68Uv0LtqN2iXthFzoOdxliZplP8PTGGmMBOiLoAaB9EGUEa5WyUuijK5eazAPmjxly6Lc++U+xz3/0E8e2yaGPbDfhOEyCqODLIEhlSj/w8G7WyyS+v7TrRooTuB0Lg00O49fKoui2xZNSvSvP4Yzep5adMhcIGlkeoiH2faKtfaHBKL+G5YLG6ct+JurtvHme7UPhx/LLKiRAB8GoIo46YcutL2MVvremHbB9seuDVTmnTtRFHbw5ZDV9peYHe3tUZU0opJcLtMWllKw+QOZa0PNKgxeco8T+ur9qFO47ulqGbAb/PpEADXIHJ1TvJacw7O1jA2uNNlrjOHpByMOS/mlYN2B893g3ml/4jqyUWeXOsxcPKPyHifGqZ2XZdbTnScTmGgq2+UFxnD/he26moTPS51K2JmM1Cn2j6jHK43qu1Uv5TF9FN+fwuoWdvq4KyVZ1DFZToz6ERDcId3eom/JK0icKZJfxwIX4EUsfE4oMjaKNFD0byeFKVNMoG3UBqSZnoKKSWqLRAtljuDXNhc1WgeFcO/wXV0Dtm1L/UEzTtAiaJsNolMNtuInEWPulxRgp3t1yJZVw1o3u4fnMHMTGBQMNPaAcjtF25mMKHlXc/AVtsVWgAZfYGJwJD/uIsDOx+N4/A550QFRLqLAs0+u5ONy+ONIgxV3Z6Cfu2aFQGETodPaPPy+9dm6HPBScDbi3XKDISQcNRwF30VXcbFdBrlCcptZnCjx6beWwbLCBuEoogY1Tq9zeu2IXKzNXNsWKZqZmt1Hz1hm542+sbpvLSJ8Ma/mhz0WBMt1XwKY+lSnXBJB1viK8FYB1oiraKVDzWU0YBJRUIqxbqPryFu38ERsbKZdt2EHHvznzRJtE1KWg1mxv6fcuMNtfUfm/7zTuuZCVy/57dllFfmsL/qOHeb8WNaxpnebsVow4rxfiuCl0vjzkbxpg1X48vXMOIxSoccSOf3sOECAhBa4OYFyyN266PPbc2COGxAG2mqPpMe0YDhZbpAF23/i7bXBQXaET8UXEhBBRYKByZXugiaJS4YzLzNV16E5rXNhq90+/5/7kStXJROp7MsjdP6CARc7kJAcggCkh8I2IcApnxJJXhqSkggFZPrANji3hv7r7n3F5i/8yxrCIgdAhIoaN8dte0uy96PhtV424x4AhLboy6XFhCmGLri5V7d0Ah8t2AcE6JA0U30pL5iFEscUtCykPJ1MpFnkK5R0A7m6UOYp38wbx/zKPdDQkMssOIYLC82qLcNHIZ7m+B4O+7pvdy7Oph7V0eC4mjy/T4aVbo2XDMKNtwi/HncpD6XCrTLGcQ5odiSmhAPpQJzcMmVCMVX5ebVLm6ODuHm6Ac393GTUJ8A6QzDeCjMN4V1bm4BR0PNdXC8ATeTFW7S7dy8Ppib11+bm3vIxyG/kIIpKmSASSjCjnyQiwjCAiq5FIp/XfJd7yLf+BDyjX+Qb29KKiHugX1DQiC84YCvc28LNhrurWPjDbinHQRGe7l3dXt4YLz9dpHx1EXGZ1Iz8HlImZJhyDkOSKiasOpTOB0KrqCacThUvsUbnyesMt6brVwfbpXrr26VPYqHoxjlKsCBYHDygoSwUzwxaJcQqgIRvs1hYfurtn5GcrGh9OaF2tXlYe/dlsOOOqa9xEsuKdGAWpDnmYb4gHvwVSH4n4BQzGXzbg4yd0mkghYCbKGBNQ2YLAT2gIMLgoArEvJ/8+u5p03f83lbAfAE73YB4FjuvQ4Cmo8CRD3z/SzxBWWEUB5KzDBVTcqCfQWsJVRBRgh+k4TEQkD4QGAMnZhSlHK28Q3uOwHAbQ8B1zsRcBwAvoX9D3gDL5UgcusreJeUUh9OBzyE4wCcEQgX6vs08fWKiXdZ+KnYusPER8fXN7Lxuh83ScyGHw9V8zXrVPoBVpRRpSSU4jv14te7Ppi1RjougF9/gwC+17Sr/rk5Ua77Z9KYljCfhhDHFYMGxilh/yrjnvW/5ts/r2n+0PXDP1BLBwjOOAApzQgAAJgrAABQSwECFAAUAAgICADEbOFE/g/33U4BAAAEAgAAFgAAAAAAAAAAAAAAAAAAAAAAZ2VvZ2VicmFfdGh1bWJuYWlsLnBuZ1BLAQIUABQACAgIAMRs4UTaLY3oKAMAADgEAAAvAAAAAAAAAAAAAAAAAJIBAABmOGYxNjhlMTBkZDM0YTc3M2IwZDYyZTI2ZmM0MjY3YlxlcXRyaWFuZ2xlLmdpZlBLAQIUABQACAgIAMRs4UQVyoTUogEAAJ0BAAAtAAAAAAAAAAAAAAAAABcFAAA4MDZkM2I4MDY0ODU5YjhmOTI5ZGU5MmU2ZTNhOTk5Y1xtaWRwb2ludC5wbmdQSwECFAAUAAgICADEbOFEgJIJdt4BAADZAQAANQAAAAAAAAAAAAAAAAAUBwAAMmQ2ZGJmY2ZhMzQ5ZTBkMzdlNmJlMTI4ODIxMDIzN2VcdHJhbnNsYXRpbmcgbGluZS5wbmdQSwECFAAUAAgICADEbOFEwToMATcGAAAPKgAAEgAAAAAAAAAAAAAAAABVCQAAZ2VvZ2VicmFfbWFjcm8ueG1sUEsBAhQAFAAICAgAxGzhREXM3l0aAAAAGAAAABYAAAAAAAAAAAAAAAAAzA8AAGdlb2dlYnJhX2phdmFzY3JpcHQuanNQSwECFAAUAAgICADEbOFEzjgAKc0IAACYKwAADAAAAAAAAAAAAAAAAAAqEAAAZ2VvZ2VicmEueG1sUEsFBgAAAAAHAAcAHQIAADEZAAAAAA==" ;
+	parameters.language = "en"
+</script>
+
+<div id="applet_container">
+</div>
+
+<script type="text/javascript">
+
+
+function ggbOnInit() {
+	var begindate = new Date();
+	var begintime = begindate.getTime();
+	Command('begintime ='+begintime+'')
+	console.log(ggbApplet.getValue('begintime'));
+	
+  var element = document.getElementsByClassName("toolbar_button")[0]; 
+  element.setAttribute("isselected", "false"); 
+  ggbApplet.debug("ggbOnInit");
+  ggbApplet.registerAddListener("newObjectListener");
+  function Command(cmd){ggbApplet.debug(cmd); ggbApplet.evalCommand(cmd);}
+  function abspos(x,y){
+  return "Corner[4] + ("+x+"*(x(Corner[3])-x(Corner[4])),"+y+"*(x(Corner[2])-x(Corner[1])))"
+  }
+  Command('progress = 0');
+  Command('Progresstext = Text["Progress: "progress"%",'+abspos("0.011","-0.032915")+']');
+  Command('countnumber = 0');
+  Command ('count0 = Text["Count = "countnumber"",'+abspos("0.85","-0.032915")+']');
+	Command('W = (-10,-10)'); 
+	ggbApplet.setVisible("W",false);
+	Command('welldone = Text["Well done!", W]'); 		
+	ggbApplet.setVisible("welldone",false);	
+	}
+
+  function Command(cmd){ggbApplet.debug(cmd); ggbApplet.evalCommand(cmd);}
+    function abspos(x,y){
+  return "Corner[4] + ("+x+"*(x(Corner[3])-x(Corner[4])),"+y+"*(x(Corner[2])-x(Corner[1])))"
+  }
+  	var count = 'Text["Count = 0",'+abspos("0.85","-0.032915")+']'
+function newObjectListener(obj) {
+if (ggbApplet.getObjectType(obj) === "boolean" || ggbApplet.getObjectType(obj) === "text" || ggbApplet.getObjectType(obj) === "numeric"|| obj == "W")
+{return;
+}
+
+
+    if (ggbApplet.getObjectType(obj) == "segment" || ggbApplet.getObjectType(obj) == "circle" || ggbApplet.getObjectType(obj) == "ray" || ggbApplet.getObjectType(obj) == "line") {
+ggbApplet.setColor(obj,255,204,102);
+}
+
+  function Command(cmd){ggbApplet.debug(cmd); ggbApplet.evalCommand(cmd);}
+
+    function abspos(x,y){
+  return "Corner[4] + ("+x+"*(x(Corner[3])-x(Corner[4])),"+y+"*(x(Corner[2])-x(Corner[1])))"
+  }
+ 
+var cmdString = ggbApplet.getCommandString(obj);
+
+if (cmdString.substring(0,3) == "Ray" || (cmdString.substring(0,2) == "Eq" && ggbApplet.getObjectType(obj)=="point") || cmdString.substring(0,3) == "Seg" ||cmdString.substring(0,3) == "Cir" || cmdString.substring(0,3) == "Mid" || cmdString.substring(0,13) == "AngleBisector" || cmdString.substring(0,4) == "Perp" || cmdString.substring(0,4) == "Line" || (cmdString.substring(0,5) == "Trans"&& ggbApplet.getObjectType(obj)=="point")){
+	Command('countnumber = countnumber + 1');
+}
+
+if (cmdString.substring(0,13) == "AngleBisector"){
+var obj1 = cmdString.substring(14,15);
+if (ggbApplet.getObjectType(obj1) === "point"){
+var obj2 = cmdString.substring(17,18);
+var obj3 = cmdString.substring(20,21);
+var a = ggbApplet.getXcoord(obj1);
+var b = ggbApplet.getYcoord(obj1);
+var m = ggbApplet.getXcoord(obj2);
+var n = ggbApplet.getYcoord(obj2);
+var x = ggbApplet.getXcoord(obj3);
+var y = ggbApplet.getYcoord(obj3);
+
+function round(value) {
+    return(Math.round(value * 100000) / 100000);
+}
+if ( round((n-b)*(x-m)) === round((y-n)*(m-a))){
+Command('Delete['+obj+']');
+Command('Text["You can\'t use the bisecting tool if the angle is 180 degrees !",'+abspos("0.02","-0.632915")+']');
+}
+}
+}
+function getCoord(obj){ 
+	if (ggbApplet.getObjectType(obj) === "point" ) {
+	var x = ggbApplet.getXcoord(obj);
+	var y = ggbApplet.getYcoord(obj);
+		return "("+x+","+y+")"}
+	else if (ggbApplet.getObjectType(obj)==="segment" || ggbApplet.getObjectType(obj)==="ray" ){
+	Command("xx = x(Point["+obj+",0.5])");
+	Command("yy = y(Point["+obj+",0.5])");
+	var x = ggbApplet.getValue("xx");
+	var y = ggbApplet.getValue("yy");
+	return "("+x+","+y+")";
+	}
+	else if (ggbApplet.getObjectType(obj)==="circle"){
+	var x = ggbApplet.getXcoord(cmdString.substring(7,8));
+	var y = ggbApplet.getYcoord(cmdString.substring(7,8));
+	return "("+x+","+y+")";
+	}
+}
+
+  // this functions can check all general objects
+  function checkobject(target,x,y) {
+    if (obj != "finished") {
+      Command("finished = (" + obj + "== " + target + ")");
+      finished = ggbApplet.getValueString("finished");
+      if (finished.indexOf("true") > -1) {
+	  Command('f_'+target+'= Text["", (0,0)]');
+	  Command("W = "+getCoord(target)+"+("+x+","+y+")");
+		ggbApplet.setVisible("welldone",true);		  
+      } 
+    }
+  }
+  // this functions check line segments
+  function checksegment(target,x,y) {
+    if (ggbApplet.getObjectType(obj) == "segment") {
+  	  var beginpointobject = "Point["+obj+",0]"
+	  var endpointobject = "Point["+obj+",1]"
+	  var beginpointtarget = "Point["+target+",0]"
+	  var endpointtarget = "Point["+target+",1]"
+      //here it checks if endpoints of line segment are equal
+      if (obj != "finished") {
+        Command("finished =((("+beginpointobject+"=="+beginpointtarget+")||("+beginpointobject+"=="+endpointtarget+"))&&(("+endpointobject+"=="+beginpointtarget+")||("+endpointobject+"=="+endpointtarget+")))");
+        finished = ggbApplet.getValueString("finished");
+      if (finished.indexOf("true") > -1) {
+	  Command('f_'+target+'= Text["", (0,0)]');
+	  if (typeof x !== 'undefined'){
+  	  Command("W = "+getCoord(target)+"+("+x+","+y+")")};	
+		ggbApplet.setVisible("welldone",true);		  
+      }
+     			     }
+   							 }
+ 					}
+   // this functions can check if line segment has right direction
+ 
+ function checkdirection(target,x,y) {
+    if (ggbApplet.getObjectType(obj) == "segment" || ggbApplet.getObjectType(obj) == "ray" || ggbApplet.getObjectType(obj) == "line") {
+    if (obj != "finished") {
+      
+	  Command("finished = (("+obj+"(1)=="+target+"(1))&&("+obj+"(-1)=="+target+"(-1)))");
+      finished = ggbApplet.getValueString("finished");
+      if (finished.indexOf("true") > -1) {
+	  Command('f_'+target+'= Text["", (0,0)]');
+	  	  if (typeof x !== 'undefined'){
+  	  Command("W = "+getCoord(target)+"+("+x+","+y+")")};	
+		ggbApplet.setVisible("welldone",true);		
+      }
+    }
+	}
+  }
+  // this functions check if the new point is on the targetline
+  function checkpointontarget(target,x,y) {
+    if (ggbApplet.getObjectType(obj) == "point") {
+    if (obj != "finished") {
+      Command("finished = ("+target+"(x("+obj+"))==y("+obj+"))");
+      finished = ggbApplet.getValueString("finished");
+      if (finished.indexOf("true") > -1) {
+	  Command('f_p'+target+'= Text["", (0,0)]');
+	  	  if (typeof x !== 'undefined'){
+  	  Command("W = "+getCoord(obj)+"+("+x+","+y+")")};	
+		ggbApplet.setVisible("welldone",true);		 
+ }
+    }
+  }
+  }
+
+function drawn(object){
+	return ggbApplet.getVisible('f_'+object) ;
+}
+var setVisible = ggbApplet.setVisible;
+
+function LevelCompleted(condition,mincount){
+ if(condition){
+	var enddate = new Date();
+	var endtime = enddate.getTime();
+	var time = (endtime - ggbApplet.getValue('begintime'))/1000;
+ 	Command('progress = 100');
+	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
+    var countint = Math.round(mincount*1000/(ggbApplet.getValue("countnumber"))- time);
+    Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
+   //document.getElementById("level").style.display="inline-block";	
+	  $( "#hidden" ).slideDown(1000);	
+   $( "#hiddencomments" ).toggle();	
+
+	}
+}   
+
+
+checkobject("pointC",-0.5,0.5);
+checkobject("pointLT",0.2,0);
+checkobject("pointR",0.2,0);
+checkobject("pointRT",1,0);
+checkobject("pointLT",-1.2,0);
+checkobject("pointL",-1.2,0);
+checksegment("segmentLB");
+checksegment("segmentRB");
+checksegment("segmentLT");
+checksegment("segmentRT");
+checksegment("segmentT");
+
+
+if (drawn("pointC"))
+{
+	Command('progress = 10');
+   }
+
+if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentT") === 1){
+	Command('progress = 20');
+}
+
+if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentT") === 2){
+	Command('progress = 40');  
+}
+
+if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentT") === 3){
+	Command('progress = 60');   
+}
+if (drawn("segmentLT") + drawn("segmentRT") + drawn("segmentLB") + drawn("segmentRB") + drawn("segmentT") === 4){
+	Command('progress = 80');         	
+}
+
+LevelCompleted(drawn("segmentLT") && drawn("segmentRT") && drawn("segmentLB") && drawn("segmentRB") && drawn("segmentT"),6);
+
+}
+</script>
+
+
+
+        © 2014 Kasper Peulen. Created with <a href="http://www.geogebra.org/">GeoGebra</a>.
+<p>This game is in active development, you can report bugs at <a href="https://github.com/kasperpeulen/euclidthegame">github</a>. <br>
+</p>
+
+If you like this game and want to support me with improving this game, you can make a donation here. <br>Thank you for your support ! Follow me on <a href="https://twitter.com/KasperPeulen">twitter</a>, to get updates about new features and new levels.
+
+ 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<p>Comments will be visible once you have completed the level. </p>
+<div id="hiddencomments" style="display: none">
+				 <div style="max-width:800px; font-size:5pt;"id="disqus_thread"></div></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'euclidthegame'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+    </body>
+    </div>
+</html>
