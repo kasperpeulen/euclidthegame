@@ -13,6 +13,7 @@ var totalscore = 0;
 					totalscore = parseInt(localStorage.Level{{p.number}}) + totalscore;
 					localStorage.totalscore = totalscore ;
 					
+					console.log(localStorage.totalscore+"totalscore");
 					}
 			
 					</script>
@@ -30,19 +31,17 @@ var totalscore = 0;
         {% endfor %}
 
 
-<b>Total score: <script>document.write(totalscore);</script> </b> 
+<b>Total sore: <script>document.write(totalscore);</script> </b> 
 
 <br>
 <br>
 <br>
 <script>
 var totalscore =0;
-var url = "";
   var javascriptVariable = localStorage.Level1;
  for (var i = 0; i < 26; i++) {
  if (localStorage["Level"+i] > 0 ){
 	totalscore = parseInt(localStorage["Level"+i]) + totalscore;
-	url = url + "Level"+i+":"+localStorage["Level"+i]+" ";
   } 
 }
 
@@ -50,17 +49,15 @@ var url = "";
       {
         var nameElement = document.getElementById("someInput");
         var theName = nameElement.value;
-		if (totalscore > 22000){
-		if (!(localStorage.submit >0)){localStorage.submit = 1;	}
-		else{localStorage.submit = 1 +  parseInt(localStorage.submit);}
-		window.location.href = "/submitscore.php?name="+theName+"&score=" + totalscore + url +localStorage.submit; 
+		if (totalscore > 22476){
+		window.location.href = "/submitscore.php?name="+theName+"+score=" + totalscore; 
 		}
       }
 	  
 
 
 </script>
-Submit your score here.
+You can submit you're score here:
 <br>
 
 Name:  <input id="someInput" type="text">
@@ -68,13 +65,5 @@ Name:  <input id="someInput" type="text">
  
 <br> 
 <br>
-Highscore: <br>
-1. FrauSoboleva (24866)<br>
-2. subver (24840) <br>
-3. Pashishe (24521) <br>
-4. EugeneAce (24493)<br>
-5. dragonfly (24523)<br>
-6. lechiko (24479) <br>
-7. Oddy (24260) <br>
-8. FaB0SS (24214)<br> 
-
+Highscore: 22476 by avlasov <br> Well done !<br>
+Highscore will be updated tomorrow morning.
