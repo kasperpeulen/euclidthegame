@@ -1,11 +1,27 @@
 © 2014 Kasper Peulen. Created with <a href="http://www.geogebra.org/">GeoGebra</a>.
 
 
-<p>This game is in active development, you can report bugs at <a href="https://github.com/kasperpeulen/euclidthegame">github</a>. <br>
+{% if page.number > 1 %}
+<br><br>
+Current records for this level:
+<ul>
+<li>using all tools: <script>document.write(minlevel{{page.number}});</script>
+<li>using primitive tools only: 
+<script>
+if (minlevel{{page.number}}p==0){document.write("Not yet determined.");}
+else{document.write(minlevel{{page.number}}p);}
+</script>
+
+</ul>
+{% endif %}
 </p>
-{% if page.number > 5 %}
+
+<p>This game is in active development, you can report bugs at <a href="https://github.com/kasperpeulen/euclidthegame">github</a>. If you think you have a new record, you can leave a message in the comments !</p>
+
+
+{% if page.number > 19 %}
 <p>
-If you like this game and want to support me with improving this game, you can make a donation. Thank you for your support ! 
+If you like this game and want to support me with improving this game or with the development of other free educational math games, you can make a donation. Thank you for your support ! 
 
  	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">

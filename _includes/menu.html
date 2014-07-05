@@ -1,5 +1,5 @@
 <script>
-var totalscore = 0;
+
 </script>
     {% assign allPages = site.pages | group_by:"cat" %}
         {% for page_cat in allPages %}
@@ -8,13 +8,31 @@ var totalscore = 0;
             {% assign sorted_pages = page_cat["items"] | sort:"number" %}
             {% for p in sorted_pages %}
 					<script> 
-					if (localStorage.Level{{p.number}} > 0){ 
-					document.write("<li><a href=\"{{ p.url }}\">{{p.title}}</a> ("+localStorage.Level{{p.number}}+")</li>");
-					totalscore = parseInt(localStorage.Level{{p.number}}) + totalscore;
-					localStorage.totalscore = totalscore ;
+					{% include encircle.js %}
+					if (localStorage.Level{{p.number}} >= 900 && {{p.number}} > 1)
+					{localStorage.Level{{p.number}} = minlevel{{p.number}};}
+					if (localStorage.Level{{p.number}} >= 700 && {{p.number}} > 1)
+					{localStorage.Level{{p.number}} = minlevel{{p.number}} +1 ;}
+					if (localStorage.Level{{p.number}} >= 500 && {{p.number}} > 1)
+					{localStorage.Level{{p.number}} = minlevel{{p.number}} +2 ;}
+					if (localStorage.Level{{p.number}} >= 300 && {{p.number}} > 1)
+					{localStorage.Level{{p.number}} = minlevel{{p.number}} +3 ;}
+					if (localStorage.Level{{p.number}} >= 100 && {{p.number}} > 1)
+					{localStorage.Level{{p.number}} = minlevel{{p.number}} +4 ;}					
 					
-					}
-			
+					if (localStorage.Level{{p.number}} >= 100 && {{p.number}} < 2)
+					{localStorage.Level{{p.number}} = 0;
+					localStorage.Level{{p.number}}p = minlevel{{p.number}}p;}					
+					
+					if (localStorage.Level{{p.number}} > 0 ||localStorage.Level{{p.number}}p > 0 ){
+					var levelurl = "<li ><a href=\"{{ p.url }}\">{{p.title}}</a> ";
+					if (localStorage.Level{{p.number}} > 0)
+					{ levelurl +=  encircle(localStorage.Level{{p.number}})+"";}
+					if (localStorage.Level{{p.number}}p > 0)
+					{ levelurl +=  encircle2(localStorage.Level{{p.number}}p)+" ";}
+					levelurl +="</li>";
+					document.write(levelurl);
+					}			
 					</script>
             {% endfor %}
 			<script>
@@ -22,59 +40,73 @@ var totalscore = 0;
 			var next = number + 1;
 			var nextlevel = "Level"+next;			
 			console.log(localStorage.nextlevel);
-					if (localStorage.Level{{page.number}} > 0 && (localStorage[nextlevel] > 0) === false){ 
-					document.write("<li><a href=\"/"+nextlevel+"\">Level "+next+"</a></li>");}	
+					if (localStorage.Level{{page.number}} > 0 && (localStorage[nextlevel] > 0) === false){
+					if ({{page.number}} <25){
+					document.write("<li><a href=\"/"+nextlevel+"\">Level "+next+"</a></li>");}}	
 			</script>
         </ul>
         {% endunless %}
         {% endfor %}
 
 
-<b>Total score: <script>document.write(totalscore);</script> </b> 
 
-<br>
-<br>
-<br>
 <script>
 var totalscore =0;
-var url = "";
-  var javascriptVariable = localStorage.Level1;
  for (var i = 0; i < 26; i++) {
- if (localStorage["Level"+i] > 0 ){
-	totalscore = parseInt(localStorage["Level"+i]) + totalscore;
-	url = url + "Level"+i+":"+localStorage["Level"+i]+" ";
+ if ((parseInt(localStorage["Level"+i+"p"]) <= window["minlevel"+i+"p"] )&& !parseInt(localStorage["Level"+i+"p"])==0){
+	totalscore = 1 + totalscore;
   } 
 }
+ for (var i = 0; i < 26; i++) {
+ //console.log(window["minlevel"+i],parseInt(localStorage["Level"+i]),i);
+ if ((parseInt(localStorage["Level"+i]) <= window["minlevel"+i]) && !parseInt(localStorage["Level"+i])==0){
+	totalscore = 1 + totalscore;
+  } 
+}
+</script>
+<b>Golden Medals: <script>document.write(totalscore);</script> </b> 
+<br><br>
+<a href="/Medal/">Info about medals and controls</a>
 
-      function doStuff()
+  
+<script>
+  function doStuff()
       {
         var nameElement = document.getElementById("someInput");
         var theName = nameElement.value;
-		if (totalscore > 22000){
-		if (!(localStorage.submit >0)){localStorage.submit = 1;	}
-		else{localStorage.submit = 1 +  parseInt(localStorage.submit);}
-		window.location.href = "/submitscore.php?name="+theName+"&score=" + totalscore + url +localStorage.submit; 
+		if (totalscore > 10){
+		var totallevels ="" ;
+		 for (var i = 0; i < 26; i++) {
+ if (localStorage["Level"+i] > 0 ){
+	totallevels = totallevels + "Level"+i+":"+localStorage["Level"+i] +" "; 
+	console.log(totallevels);
+  } 
+   if (localStorage["Level"+i+"p"] > 0 ){
+	totallevels = totallevels + "Level"+i+"p:"+localStorage["Level"+i+"p"] +" "; 
+	console.log(totallevels);
+  } 
+}
+		window.location.href = "/submitscore.php?name="+theName+"+score=" + totalscore +totallevels; 
 		}
       }
 	  
-
-
 </script>
-Submit your score here.
+<br><br>
+<b>Submit your score</b>
 <br>
 
-Name:  <input id="someInput" type="text">
+Name:  <input style="width:140px;" id="someInput" type="text">
   <input type="button" value="Submit" onClick="doStuff()">
  
-<br> 
-<br>
-Highscore: <br>
-1. FrauSoboleva (24866)<br>
-2. subver (24840) <br>
-3. Pashishe (24521) <br>
-4. EugeneAce (24493)<br>
-5. dragonfly (24523)<br>
-6. lechiko (24479) <br>
-7. Oddy (24260) <br>
-8. FaB0SS (24214)<br> 
-
+<br><br>
+<b>Highscores:</b> <br>
+1. WiseKaa 36 <br>
+2. nubideus 33<br>
+3. ilarrosa 30<br>
+4. Boris 29<br>
+5. Pinkpuppy 28 <br>
+6. xLime 25<br>
+7. maxim 25 <br>
+8. Artuyshin_Denis 24<br>
+9. Lior K 22<br>
+10. 88MilesPrower 20<br>

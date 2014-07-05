@@ -1,11 +1,8 @@
 
+var primitives = true;
 
 function ggbOnInit() {
-	var begindate = new Date();
-	var begintime = begindate.getTime();
-	Command('begintime ='+begintime+'')
-	console.log(ggbApplet.getValue('begintime'));
-	
+
   var element = document.getElementsByClassName("toolbar_button")[0]; 
   element.setAttribute("isselected", "false"); 
   ggbApplet.debug("ggbOnInit");
@@ -17,7 +14,7 @@ function ggbOnInit() {
   Command('progress = 0');
   Command('Progresstext = Text["Progress: "progress"%",'+abspos("0.011","-0.032915")+']');
   Command('countnumber = 0');
-  Command ('count0 = Text["Count = "countnumber"",'+abspos("0.85","-0.032915")+']');
+  Command ('count0 = Text["Moves: "countnumber"",'+abspos("0.85","-0.032915")+']');
 	Command('W = (-10,-10)'); 
 	ggbApplet.setVisible("W",false);
 	Command('welldone = Text["Well done!", W]'); 		
@@ -49,7 +46,20 @@ var cmdString = ggbApplet.getCommandString(obj);
 
 if (cmdString.substring(0,3) == "Ray" || (cmdString.substring(0,2) == "Eq" && ggbApplet.getObjectType(obj)=="point") || cmdString.substring(0,3) == "Seg" ||cmdString.substring(0,3) == "Cir" || cmdString.substring(0,3) == "Mid" || cmdString.substring(0,13) == "AngleBisector" || cmdString.substring(0,4) == "Perp" || cmdString.substring(0,4) == "Line" || (cmdString.substring(0,5) == "Trans"&& ggbApplet.getObjectType(obj)=="point")){
 	Command('countnumber = countnumber + 1');
+if (!(cmdString.substring(0,3) == "Ray" || cmdString.substring(0,3) == "Seg" || cmdString.substring(0,3) == "Cir") && primitives) { primitives = false;}
+
+function isLowerCase(myString) { 
+  return (myString == myString.toLowerCase()); 
 }
+
+if(cmdString.substring(0,3) == "Cir" && (isLowerCase(cmdString.substring(10,11)) || cmdString.substring(10,12) =="Se" || cmdString.substring(10,12) =="Ra")){
+primitives = false;}	
+}
+
+
+
+console.log(obj,cmdString,ggbApplet.getObjectType(obj));
+console.log(primitives);
 
 if (cmdString.substring(0,13) == "AngleBisector"){
 var obj1 = cmdString.substring(14,15);
@@ -93,7 +103,6 @@ function getCoord(obj){
 
   // this functions can check all general objects
   function checkobject(target,x,y) {
-    if (obj != "finished") {
       Command("finished = (" + obj + "== " + target + ")");
       finished = ggbApplet.getValueString("finished");
       if (finished.indexOf("true") > -1) {
@@ -101,7 +110,6 @@ function getCoord(obj){
 	  Command("W = "+getCoord(target)+"+("+x+","+y+")");
 		ggbApplet.setVisible("welldone",true);		  
       } 
-    }
   }
   // this functions check line segments
   function checksegment(target,x,y) {
@@ -127,8 +135,7 @@ function getCoord(obj){
  
  function checkdirection(target,x,y) {
     if (ggbApplet.getObjectType(obj) == "segment" || ggbApplet.getObjectType(obj) == "ray" || ggbApplet.getObjectType(obj) == "line") {
-    if (obj != "finished") {
-      
+     
 	  Command("finished = (("+obj+"(1)=="+target+"(1))&&("+obj+"(-1)=="+target+"(-1)))");
       finished = ggbApplet.getValueString("finished");
       if (finished.indexOf("true") > -1) {
@@ -137,13 +144,12 @@ function getCoord(obj){
   	  Command("W = "+getCoord(target)+"+("+x+","+y+")")};	
 		ggbApplet.setVisible("welldone",true);		
       }
-    }
+    
 	}
   }
   // this functions check if the new point is on the targetline
   function checkpointontarget(target,x,y) {
     if (ggbApplet.getObjectType(obj) == "point") {
-    if (obj != "finished") {
       Command("finished = ("+target+"(x("+obj+"))==y("+obj+"))");
       finished = ggbApplet.getValueString("finished");
       if (finished.indexOf("true") > -1) {
@@ -152,7 +158,7 @@ function getCoord(obj){
   	  Command("W = "+getCoord(obj)+"+("+x+","+y+")")};	
 		ggbApplet.setVisible("welldone",true);		 
  }
-    }
+
   }
   }
 
@@ -163,25 +169,23 @@ var setVisible = ggbApplet.setVisible;
 
 function LevelCompleted(condition,mincount){
  if(condition){
-	var enddate = new Date();
-	var endtime = enddate.getTime();
-	var time = (endtime - ggbApplet.getValue('begintime'))/1000;
-	if (time >100) {time =100;}
  	Command('progress = 100');
 	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
-    var countint = Math.round(mincount*1000/(ggbApplet.getValue("countnumber"))- time);
-	if (countint < 100){countint = 100;}
-    Command('score = Text["Score: '+countint+'", '+abspos("0.85","-0.062915")+']');     
-	if (countint > 900){ Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');     }
+    var count = ggbApplet.getValue("countnumber");
+	if (count === mincount){ 
+	if (primitives){
+	Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of primitive moves!", '+abspos("0.35","-0.602915")+']');}
+	else{Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');}
+	}	
+
    //document.getElementById("level").style.display="inline-block";	
 	  $( "#hidden" ).slideDown(1000);	
    $( "#hiddencomments" ).toggle();	
 // Store
-var oldscore = localStorage.Level{{page.number}} ;
-var newscore = countint;
-console.log(oldscore,newscore,newscore>oldscore);
-if ( !(newscore < oldscore) ) {localStorage.Level{{page.number}} = newscore;}
 
+if (primitives){
+localStorage.Level{{page.number}}p = count;}
+else{localStorage.Level{{page.number}} = count;}
 // Retrieve
    
 
