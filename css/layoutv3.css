@@ -29,14 +29,12 @@ a:active {
 	}
 	
 #medal{
-	font-family: Universalia; 
-	padding-bottom:15px;
+	font-family: "Times New Roman"; 
 	color: Silver;
 }
 
 #medalgold{
-	font-family: Universalia; 
+	font-family: "Times New Roman"; 
 	position: relative;
-	bottom:1px;
     color: rgb(255,204,102);
 }
