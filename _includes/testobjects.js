@@ -52,7 +52,10 @@ function isLowerCase(myString) {
   return (myString == myString.toLowerCase()); 
 }
 
-if(cmdString.substring(0,3) == "Cir" && (isLowerCase(cmdString.substring(10,11)) || cmdString.substring(10,12) =="Se" || cmdString.substring(10,12) =="Ra")){
+
+var lastcomma = cmdString.lastIndexOf(",");
+if(cmdString.substring(0,3) == "Cir" && (isLowerCase(cmdString.substring(lastcomma+2,lastcomma+3)) || cmdString.substring(lastcomma+2,lastcomma+4) =="Se" || cmdString.substring(lastcomma+2,lastcomma+4) =="Ra"))
+{
 primitives = false;}	
 }
 
@@ -60,6 +63,7 @@ primitives = false;}
 
 console.log(obj,cmdString,ggbApplet.getObjectType(obj));
 console.log(primitives);
+console.log(cmdString.substring(lastcomma+2,lastcomma+3));
 
 if (cmdString.substring(0,13) == "AngleBisector"){
 var obj1 = cmdString.substring(14,15);
@@ -172,22 +176,21 @@ function LevelCompleted(condition,mincount){
  	Command('progress = 100');
 	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
     var count = ggbApplet.getValue("countnumber");
-	if (count === mincount){ 
-	if (primitives){
+	if (primitives && (count === minlevel{{page.number}}p)){
 	Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of primitive moves!", '+abspos("0.35","-0.602915")+']');}
-	else{Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');}
-	}	
-
+	if (!primitives)
+	{ if(count === minlevel{{page.number}}){
+	Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');}}
    //document.getElementById("level").style.display="inline-block";	
 	  $( "#hidden" ).slideDown(1000);	
    $( "#hiddencomments" ).toggle();	
-// Store
+
 
 if (primitives){
-localStorage.Level{{page.number}}p = count;}
-else{localStorage.Level{{page.number}} = count;}
-// Retrieve
-   
+if (!(localStorage.Level{{page.number}}p < count)) {localStorage.Level{{page.number}}p = count;}}
+else{
+if(!(localStorage.Level{{page.number}}<count)){localStorage.Level{{page.number}} = count;}}
+
 
 	}
 }   
