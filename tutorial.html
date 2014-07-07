@@ -20,8 +20,8 @@ number: 0
 
 <p><b>Hint:</b> Hold your mouse on a tool to get a brief instruction how the tool works.</p>
 <div id="hidden" style="display: none">
-<p id="level">
-Well done ! You are now ready to begin with <a href="/Level1/">Level 1</a>
+<p id="level" onclick="location.href='/Level1/';" style="cursor:pointer;">
+Well done ! You are now ready to begin with <a href="/Level1/">Level 1</a>.
 </p>
 </div>
 <script type="text/javascript">
@@ -63,6 +63,8 @@ if (drawn("ray1") + drawn("circle1") + drawn("circle2") + drawn("intersect1") + 
 	
 LevelCompleted(drawn("ray1") && drawn("circle1") && drawn("circle2") && drawn("intersect1") && drawn("segment1"),4);
 
+if(drawn("ray1") && drawn("circle1") && drawn("circle2") && drawn("intersect1") && drawn("segment1"))
+{	Command('Complete2 = Text["Click on the green box to begin with Level 1.",  '+abspos("0.15","-0.15")+']');  }
 
 }
 </script>
