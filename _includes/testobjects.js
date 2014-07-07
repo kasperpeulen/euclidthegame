@@ -53,7 +53,7 @@ function isLowerCase(myString) {
 }
 
 
-var lastcomma = cmdString.lastIndexOf(",");
+var lastcomma = cmdString.indexOf(",");
 if(cmdString.substring(0,3) == "Cir" && (isLowerCase(cmdString.substring(lastcomma+2,lastcomma+3)) || cmdString.substring(lastcomma+2,lastcomma+4) =="Se" || cmdString.substring(lastcomma+2,lastcomma+4) =="Ra"))
 {
 primitives = false;}	
