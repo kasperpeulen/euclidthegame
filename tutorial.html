@@ -8,11 +8,11 @@ number: 0
 <img style="float:right;" src="data:image/png;base64, {% base64 img/tutorial.png %}">
 	<b>Goal:</b>
 	<ol>
-	<li>Construct a line segment from A to B.</li>
-	<li>Construct a ray from C to D.</li>
-	<li>Construct a circle with center E and radius EF.</li>
-	<li>Construct a circle with center F and radius EF.</li>
-	<li>Construct a (black) point at the intersection of AB and the ray CD.</li>
+	<li>Construct a line segment from A to B.<span id="segment" style="display:none; color: green;"> ✓</span></li>
+	<li>Construct a ray from C to D.<span id="ray" style="display:none; color: green;"> ✓</span></li></li>
+	<li>Construct a circle with center E and radius EF.<span id="circle1" style="display:none; color: green;"> ✓</span></li></li>
+	<li>Construct a circle with center F and radius EF.<span id="circle2" style="display:none; color: green;"> ✓</span></li></li>
+	<li>Construct a (black) point at the intersection of AB and the ray CD.<span id="point" style="display:none; color: green;"> ✓</span></li></li>
 	</ol>
 	
 
@@ -58,13 +58,30 @@ if (drawn("ray1") + drawn("circle1") + drawn("circle2") + drawn("intersect1") + 
 
 if (drawn("ray1") + drawn("circle1") + drawn("circle2") + drawn("intersect1") + drawn("segment1") ===4  ) { 
 	Command('progress = 80');
-	}	
+	}
 	
+if(drawn("ray1")){
+	$( "#ray" ).show();
+}	
+
+if(drawn("circle1")){
+	$( "#circle1" ).show();
+}	
+if(drawn("circle2")){
+	$( "#circle2" ).show();
+}	
+if(drawn("intersect1")){
+	$( "#point" ).show();
+}	
+
+if(drawn("segment1")){
+	$( "#segment" ).show();
+}	
 	
 LevelCompleted(drawn("ray1") && drawn("circle1") && drawn("circle2") && drawn("intersect1") && drawn("segment1"),4);
 
 if(drawn("ray1") && drawn("circle1") && drawn("circle2") && drawn("intersect1") && drawn("segment1"))
-{	Command('Complete2 = Text["Click on the green box to begin with Level 1.",  '+abspos("0.15","-0.15")+']');  }
+{	Command('Complete2 = Text["Click on the green box to begin with Level 1.",  '+abspos("0.15","-0.35")+']');  }
 
 }
 </script>
