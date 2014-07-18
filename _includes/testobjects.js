@@ -43,10 +43,23 @@ ggbApplet.setColor(obj,255,204,102);
   }
  
 var cmdString = ggbApplet.getCommandString(obj);
+console.log(cmdString);
+console.log(ggbApplet.getObjectType(obj));
+console.log(obj);
+
+if (ggbApplet.getObjectType(obj) == "point" && cmdString == "")
+{
+	console.log(ggbApplet.getXcoord(obj));
+	var x = ggbApplet.getXcoord(obj) + 0.01;
+	console.log(x);
+	var y = ggbApplet.getYcoord(obj) - 0.01;
+	Command( obj +"= ("+x+","+y+")");
+}
 
 if (cmdString.substring(0,3) == "Ray" || (cmdString.substring(0,2) == "Eq" && ggbApplet.getObjectType(obj)=="point") || cmdString.substring(0,3) == "Seg" ||cmdString.substring(0,3) == "Cir" || cmdString.substring(0,3) == "Mid" || cmdString.substring(0,13) == "AngleBisector" || cmdString.substring(0,4) == "Perp" || cmdString.substring(0,4) == "Line" || (cmdString.substring(0,5) == "Trans"&& ggbApplet.getObjectType(obj)=="point")){
 	Command('countnumber = countnumber + 1');
 if (!(cmdString.substring(0,3) == "Ray" || cmdString.substring(0,3) == "Seg" || cmdString.substring(0,3) == "Cir") && primitives) { primitives = false;}
+
 
 function isLowerCase(myString) { 
   return (myString == myString.toLowerCase()); 
@@ -60,10 +73,6 @@ primitives = false;}
 }
 
 
-
-console.log(obj,cmdString,ggbApplet.getObjectType(obj));
-console.log(primitives);
-console.log(cmdString.substring(lastcomma+2,lastcomma+3));
 
 if (cmdString.substring(0,13) == "AngleBisector"){
 var obj1 = cmdString.substring(14,15);
