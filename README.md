@@ -1,7 +1,7 @@
 Euclid The Game
 ===============
 
-The goal of this project is to gamify geometric challanges. We use the [geogebra](http://www.geogebra.org) software for this. This game is MIT licensed, see the LICENSE file.
+The goal of this project is to gamify geometric challenges. We use the [geogebra](http://www.geogebra.org) software for this. This game is MIT licensed, see the LICENSE file.
 
 See the facebook group for updates about the iOS game:
 https://www.facebook.com/euclidthegame
