@@ -1,5 +1,5 @@
 <script>
-
+var lastlevelcompleted = null;
 </script>
     {% assign allPages = site.pages | group_by:"cat" %}
         {% for page_cat in allPages %}
@@ -32,17 +32,19 @@
 					{ levelurl +=  encircle2(localStorage.Level{{p.number}}p)+" ";}
 					levelurl +="</li>";
 					document.write(levelurl);
+					lastlevelcompleted = {{p.number}};
 					}			
 					</script>
             {% endfor %}
 			<script>
-			var number = {{page.number}}
-			var next = number + 1;
-			var nextlevel = "Level"+next;			
-			console.log(localStorage.nextlevel);
-					if (localStorage.Level{{page.number}} > 0 && (localStorage[nextlevel] > 0) === false){
-					if ({{page.number}} <25){
-					document.write("<li><a href=\"/"+nextlevel+"\">Level "+next+"</a></li>");}}	
+				if (lastlevelcompleted != null){
+					var next = lastlevelcompleted + 1;
+					var nextlevel = "Level"+next;
+					console.log(localStorage.nextlevel);
+					if (next <= 25){
+						document.write("<li><a href=\"/"+nextlevel+"\">Level "+next+"</a></li>");
+					}
+				}	
 			</script>
         </ul>
         {% endunless %}
