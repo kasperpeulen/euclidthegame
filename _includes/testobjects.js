@@ -180,8 +180,12 @@ function drawn(object){
 }
 var setVisible = ggbApplet.setVisible;
 
-function LevelCompleted(condition,mincount){
+var completed = false;
+function LevelCompleted(condition, mincount){
   if (condition) {
+    if (completed)
+      return; 
+
     Command('progress = 100');
     Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');
     var count = ggbApplet.getValue("countnumber");
@@ -207,5 +211,7 @@ function LevelCompleted(condition,mincount){
         localStorage.Level{{page.number}} = count;
       }
     }
+
+    completed = true;
   }
 }
