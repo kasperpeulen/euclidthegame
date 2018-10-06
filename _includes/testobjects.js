@@ -181,28 +181,31 @@ function drawn(object){
 var setVisible = ggbApplet.setVisible;
 
 function LevelCompleted(condition,mincount){
- if(condition){
- 	Command('progress = 100');
-	Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');   
+  if (condition) {
+    Command('progress = 100');
+    Command('Complete = Text["Level completed !",  '+abspos("0.15","-0.13")+']');
     var count = ggbApplet.getValue("countnumber");
-	if (primitives && (count === minlevel{{page.number}}p)){
-	Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of primitive moves!", '+abspos("0.35","-0.602915")+']');}
-	if (!primitives)
-	{ if(count === minlevel{{page.number}}){
-	Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');}}
-   //document.getElementById("level").style.display="inline-block";	
-	  $( "#hidden" ).slideDown(1000);	
-   $( "#hiddencomments" ).toggle();	
+    if (primitives && (count === minlevel{{page.number}}p)) {
+        Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of primitive moves!", '+abspos("0.35","-0.602915")+']');
+    }
+    if (!primitives) {
+      if (count === minlevel{{page.number}}) {
+        Command('score2 = Text["Perfect ! You have done this challenge in a minimum number of moves!", '+abspos("0.35","-0.602915")+']');
+      }
+    }
 
+    $( "#hidden" ).slideDown(1000);	
+    $( "#hiddencomments" ).toggle();	
 
-if (primitives){
-if (!(localStorage.Level{{page.number}}p < count)) {localStorage.Level{{page.number}}p = count;}}
-else{
-if(!(localStorage.Level{{page.number}}<count)){localStorage.Level{{page.number}} = count;}}
-
-
-	}
-}   
-
-
-
+    if (primitives) {
+      if (!(localStorage.Level{{page.number}}p < count)) {
+        localStorage.Level{{page.number}}p = count;
+      }
+    }
+    else {
+      if(!(localStorage.Level{{page.number}}<count)) {
+        localStorage.Level{{page.number}} = count;
+      }
+    }
+  }
+}
