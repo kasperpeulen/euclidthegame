@@ -12,6 +12,11 @@ mail($to, $subject, $message.$message2, $headers);
 <script>
 console.log(localStorage.lastLevel);
 
-window.location.href = "/Level"+localStorage.lastLevel+"/";
+if (localStorage.lastLevel > 0) {
+  window.location.href = "/Level"+localStorage.lastLevel+"/";
+}
+else {
+  window.location.href = "/Tutorial/";
+}
 
 </script>
